@@ -52,6 +52,9 @@
 }
 
 @media screen and (max-width:600px) {
+    #aboutMeTextContent{
+        max-width:90%;
+    }
     .icons{
         grid-template-columns:repeat(2, 1fr);
         grid-column-gap:80px;
