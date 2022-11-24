@@ -1,0 +1,62 @@
+[
+    {
+        "type": "utility",
+        "name": "Git",
+        "link": "/assets/img/utilities/Git Icon.png"
+    },
+    {
+        "type": "utility",
+        "name": "Jira",
+        "link": "/assets/img/utilities/Jira Icon.png"
+    },
+    {
+        "type": "utility",
+        "name": "PHP My Admin",
+        "link": "/assets/img/utilities/PHP My Admin Icon.png"
+    },
+    {
+        "type": "utility",
+        "name": "GitHub",
+        "link": "/assets/img/utilities/GitHub Icon.png"
+    },
+    {
+        "type": "utility",
+        "name": "Postman",
+        "link": "/assets/img/utilities/Postman Icon.png"
+    },
+    {
+        "type": "utility",
+        "name": "Linux",
+        "link": "/assets/img/utilities/Linux Icon.png"
+    },
+    {
+        "type": "utility",
+        "name": "Figma",
+        "link": "/assets/img/utilities/Figma Icon.png"
+    },
+    {
+        "type": "utility",
+        "name": "Vim",
+        "link": "/assets/img/utilities/Vim Icon.png"
+    },
+    {
+        "type": "utility",
+        "name": "Wordpress",
+        "link": "/assets/img/utilities/Wordpress Icon.png"
+    },
+    {
+        "type": "utility",
+        "name": "Cloudflare",
+        "link": "/assets/img/utilities/Cloudflare Icon.png"
+    },
+    {
+        "type": "utility",
+        "name": "MAMP",
+        "link": "/assets/img/utilities/MAMP Icon.png"
+    },
+    {
+        "type": "utility",
+        "name": "BitBucket",
+        "link": "/assets/img/utilities/BitBucket Icon.png"
+    }
+]

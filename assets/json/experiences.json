@@ -1,0 +1,75 @@
+[
+    {
+        "company": "Emotewell",
+        "companyImageLink": "/assets/img/companyLogos/EW Logo.png",
+        "position": "Software Engineering Tech Lead",
+        "content": [
+            {
+                "subtitle": "Team Lead",
+                "description": "Mentored and managed a team of junior developers working on back-end, web-development, and mobile-development through bi-weekly team line-ups and weekly individual meetings to strategize agile approaches to outstanding tickets and pull requests."
+            },
+            {
+                "subtitle": "REST API Development",
+                "description": "Developed a company-wide REST API using Postman and Cloudflare DNS with endpoints for mobile In-App-Purchase verification, server-side user identification and validation using public-key cryptography, natural language processing (NLP) and Machine Learning (ML), and front-end platform customization"
+            },
+            {
+                "subtitle": "Website and Mobile Optimization",
+                "description": "Decreased website load speed by over 53% and increased maximum server load by over 35% by implementing caching and compression techniques to fit complex computational models generated through load time analysis and offensive load testing."
+            },
+            {
+                "subtitle": "Mobile App Development",
+                "description": "Used Xcode and Objective-C to develop and push the first version of the Emotewell App with full website functionality in under two weeks."
+            }
+        ]
+    },
+    {
+        "company": "Emotewell",
+        "companyImageLink":"/assets/img/companyLogos/EW Logo.png",
+        "position": "Software Engineering Intern",
+        "content": [
+            {
+                "subtitle": "Website Redesign",
+                "description": "Used CSS, HTML, JS, PHP, and Figma to implement and handle a full scale website redesign event."
+            },
+            {
+                "subtitle": "SEO Optimization",
+                "description": "SEO Optimization: Applied statistical modeling and advanced regression techniques over time to logitudinally analyse and increase website SEO score by 30%."
+            },
+            {
+                "subtitle": "Website Asset Optimization",
+                "description": "Implemented loading algorithms such as Lazy-Load, asynchronous and delayed JavaScript loading, and image compression increasing page load time throughout the website."
+            },
+            {
+                "subtitle": "DNS Transfer and Configuration",
+                "description": "Transferred DNS from GoDaddy to Cloudflare and maintaining FQDN while implementing analytics engines to track user activity and retention as well as configured CDN for optimal nation-wide load speeds."
+            }
+        ]
+    },
+    {
+        "company": "Berkeley x Junipero Serra High School",
+        "companyImageLink": "/assets/img/companyLogos/Berkeley x Serra.png",
+        "position": "Computer Science Tutor",
+        "content": [
+            {
+                "subtitle": "CS170 - Advanced Algorithms",
+                "location": "Berkeley",
+                "description": "Organized and taught multiple exam review sessions as well as homework help sections with computational analysis of optimal strategies and aproaches to rigorous homework questions."
+            },
+            {
+                "subtitle": "CS61C - Machine Structures",
+                "location": "Berkeley",
+                "description": "Organized small group review sessions and tutored individuals in a one-on-one environment as needed as well as hosting project strategy sections to review project guidelines and strategize the best way to tackel complicated multi-part sections."
+            },
+            {
+                "subtitle": "CS61A & CS61B - Data Structures",
+                "location": "Berkeley",
+                "description": "Hosted full class review sessions for exams during the Covid semester with over 100 members per review session completing practice questions and answering student questions as well as hosted individual one-on-one office hours for students who were seeking auxiliary help."
+            },
+            {
+                "subtitle": "AP Computer Science",
+                "location": "Junipero Serra High School",
+                "description": "Adjunct lecturerd over half of the classes for AP CS during scheduled course meeting time as well as hosted out-of-class office hours."
+            }
+        ]
+    }
+]

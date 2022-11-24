@@ -1,0 +1,62 @@
+#aboutMeSection{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+}
+#aboutMeTextContent{
+    text-align:center;
+    max-width:66%;
+}
+#aboutMeTextContent p{
+    margin-top:20px;
+}
+.iconSection{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+}
+.iconSection > h2{
+    margin:100px 0 50px;
+}
+.icons{
+    display:grid;
+    grid-template-columns:repeat(6, 1fr);
+    grid-column-gap:5vw;
+    grid-row-gap:5vw;
+}
+.icon{
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    flex-grow:1;
+    min-width:135px;
+}
+.icon > img{
+    margin-bottom:25px;
+    max-width:100px;
+    width:12vw;
+}
+.icon > p{
+    text-align:center;
+    height: 40px;
+    overflow:hidden;
+}
+
+@media screen and (max-width:1350px) {
+    .icons{
+        grid-template-columns:repeat(4, 1fr);
+        grid-column-gap:4vw;
+    }
+}
+
+@media screen and (max-width:600px) {
+    .icons{
+        grid-template-columns:repeat(2, 1fr);
+        grid-column-gap:80px;
+    }
+    .icon > img{
+        width:100px;
+    }
+}

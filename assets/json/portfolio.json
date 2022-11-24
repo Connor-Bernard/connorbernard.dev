@@ -1,0 +1,52 @@
+[
+    {
+        "title": "Streamlined Git Style VCS",
+        "description": "Used Java to create a version-control system that mimics some of the features of Git including active directory moderation, file hashing, merge conflict handling, and remote repository interactions.",
+        "languages": [
+            "Java", 
+            "Bash", 
+            "Markdown"
+        ]
+    },
+    {
+        "title": "EmoteWell API",
+        "description": "Developed an REST API for handling mobile app payment authentication and verification through Apple using Bearer authenticated HTTP requests, public-key cryptography, and SQL for accessing and modifying PHPMyAdmin database.",
+        "languages":[
+            "PHP",
+            "HTTP",
+            "SQL"
+        ]
+    },
+    {
+        "title": "Enigma Machine",
+        "description": "Applied advanced applications of data structures to redesign the Enigma machine used in WWII with fully functional file encryption and decryption algorithms",
+        "languages": [
+            "Java"
+    ]
+    },
+    {
+        "title": "Scheme Interpereter",
+        "description": "Used the functional programming language Scheme (a Lisp dialect) in conjunction with Python to write a pseudo-self interpreter and Read-Eval-Print Loop (REPL) environment for Scheme.",
+        "languages": [
+            "Python",
+            "Scheme"
+        ]
+    },
+    {
+        "title": "Italian Restaurant Website Redesign",
+        "description": "Used HTML, CSS, JS, and PHP to create an updated website for a popular restaurant in Berkeley using data structures, prototype design techniques, and HTTP requests to dynamically populate menu items.",
+        "languages": [
+            "HTML",
+            "CSS",
+            "JavaScript",
+            "PHP"
+        ]
+    },
+    {
+        "title": "Snake (Game)",
+        "description":"Used C to recreate the popular game Snake with added functionality for parallel snake instances and a fully operational command-line UI.  Added further support for augmented board types including non-unform, non-rectangular boards.",
+        "languages":[
+            "C"
+        ]
+    }
+]

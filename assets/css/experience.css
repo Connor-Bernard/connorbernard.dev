@@ -1,0 +1,73 @@
+#experienceBoxes{
+    display:flex;
+    gap:40px;
+    flex-wrap:wrap;
+    justify-content:center;
+}
+
+.experienceBox{
+    position:relative;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    padding:30px;
+    background:black;
+    border-radius:15px;
+    max-width:700px;
+    margin:3px;
+    min-height:870px;
+}
+.experienceBox > h2{
+    text-align:center;
+}
+
+.fakeNavBar{
+    position:absolute;
+    left:25px;
+    display:flex;
+    flex-direction:row;
+    gap:7px;
+}
+.fakeNavBarItem{
+    display:inline-block;
+    padding:7px;
+    border-radius:100%;
+}
+.fakeNavBarItem.red{
+    background-color:#F15D4D;
+}
+.fakeNavBarItem.yellow{
+    background-color:#F8B531;
+}
+.fakeNavBarItem.green{
+    background-color:#4EBD3F;
+}
+
+.experienceLogo{
+    margin:20px 0 20px;
+    max-width: 400px;
+    width:100%;
+}
+
+.experienceSubtitle{
+    color:var(--tertiary-pink);
+}
+.locationSubtitle{
+    color:var(--tertiary-green);
+}
+
+@media screen and (max-width:470px) {
+    .fakeNavBar{
+        display:none;
+    }
+    .experienceBox{
+        min-height: 0;
+        padding:20px;
+    }
+    .experienceBox > h2{
+        font-size: 26px;
+    }
+    .experienceSubtitle{
+        color:white;
+    }
+}
