@@ -6,7 +6,7 @@
         <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
         <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
         <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
-        <link rel="manifest" href="/site.webmanifest" />
+        <link rel="manifest" href="/manifest.json" />
         <link rel="stylesheet" href="/assets/css/master.css" />
         <link rel="stylesheet" href="/assets/css/hello.css" />
         <link rel="stylesheet" href="/assets/css/about.css" />
@@ -72,7 +72,7 @@
                         <h1 id="helloName">Connor Bernard</h1>
                     </div>
                     <p id="helloSubNameText">Software Engineer</p>
-                
+
                     <div id="helloButtonSection">
                         <a href="/assets/files/Connor_Resume.pdf" download="true">
                             <button class="accentButton">
@@ -281,14 +281,8 @@
         <script src="/assets/js/portfolio.js" defer></script>
         <script src="/assets/js/contact.js"></script>
         <script type="module">
-            // Import the functions you need from the SDKs you need
             import { initializeApp } from "https://www.gstatic.com/firebasejs/9.14.0/firebase-app.js";
             import { getAnalytics } from "https://www.gstatic.com/firebasejs/9.14.0/firebase-analytics.js";
-            // TODO: Add SDKs for Firebase products that you want to use
-            // https://firebase.google.com/docs/web/setup#available-libraries
-
-            // Your web app's Firebase configuration
-            // For Firebase JS SDK v7.20.0 and later, measurementId is optional
             const firebaseConfig = {
                 apiKey: "AIzaSyAatMT5UKjG4NDRbsVU41-g4a24Adnz804",
                 authDomain: "connorbernarddev.firebaseapp.com",
@@ -298,8 +292,6 @@
                 appId: "1:838041937464:web:3b4190404eac821ae0e8cd",
                 measurementId: "G-X530E89GZZ"
             };
-
-            // Initialize Firebase
             const app = initializeApp(firebaseConfig);
             const analytics = getAnalytics(app);
         </script>

@@ -4,7 +4,7 @@
     "theme_color":"#4DB8FF",
     "background_color":"#000000",
     "display":"standalone",
-    "start_url":"/"
+    "start_url":"/",
     "icons":[
       {
          "src":"assets/img/icon/android-chrome-192x192.png",
@@ -16,8 +16,5 @@
          "sizes":"512x512",
          "type":"image/png"
       }
-    ],
-    "theme_color":"#ffffff",
-    "background_color":"#ffffff",
-    "display":"standalone"
+    ]
 }
