@@ -1,89 +1,307 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Welcome to Firebase Hosting</title>
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+        <link rel="manifest" href="/site.webmanifest" />
+        <link rel="stylesheet" href="/assets/css/master.css" />
+        <link rel="stylesheet" href="/assets/css/hello.css" />
+        <link rel="stylesheet" href="/assets/css/about.css" />
+        <link rel="stylesheet" href="/assets/css/experience.css" />
+        <link rel="stylesheet" href="/assets/css/portfolio.css">
+        <link rel="stylesheet" href="/assets/css/contact.css" />
+        <title>Connor Bernard</title>
+    </head>
+    <body>
+        <!-- <div class="blur" id="blur1">
+            <img src="/assets/img/blurGradients/blur1.png">
+        </div>
+        <div class="blur" id="blur2">
+            <img src="/assets/img/blurGradients/blur2.png">
+        </div>
+        <div class="blur" id="blur3">
+            <img src="/assets/img/blurGradients/blur3.png">
+        </div>
+        <div class="blur" id="blur4">
+            <img src="/assets/img/blurGradients/blur4.png">
+        </div> -->
+        <div id="loaderPage"><span id="loader"></span></div>
+        <header>
+            <div class="hfContent">
+                <div class="logo">
+                    <a href="#top"><img src="/assets/img/logo.svg" height=65px /></a>
+                </div>
+                <div class="hamburger">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
+                <nav class="headerNav">
+                    <div class="rainbowHover">
+                        <div class="navItem">
+                            <a href="#AboutMe">About Me</a>
+                        </div>
+                    </div>
+                    <div class="rainbowHover">
+                        <div class="navItem">
+                            <a href="#Experience">Experience</a>
+                        </div>
+                    </div>
+                    <div class="rainbowHover">
+                        <div class="navItem">
+                            <a href="#Portfolio">Portfolio</a>
+                        </div>
+                    </div>
+                    <div class="rainbowHover">
+                        <div class="navItem">
+                            <a href="#Contact">Contact</a>
+                        </div>
+                    </div>
+                </nav>
+            </div>
+        </header>
+        <div style="height:90px;"></div>
+        <section id="helloSection">
+            <div class="halfSection">
+                <div id="helloTextSection">
+                    <h2>Hey! My name is</h2>
+                    <div class="textGradient2">
+                        <h1 id="helloName">Connor Bernard</h1>
+                    </div>
+                    <p id="helloSubNameText">Software Engineer</p>
+                
+                    <div id="helloButtonSection">
+                        <a href="/assets/files/Connor_Resume.pdf" download="true">
+                            <button class="accentButton">
+                                <img src="/assets/img/download.svg" />
+                                Download CV
+                            </button>
+                        </a>
+                        <a href="#AboutMe"><button class="outlineButton">Learn More</button></a>
+                    </div>
+                </div>
+                <span id="helloUp"></span>
+            </div>
+            <div class="halfSection">
+                <div id="portraitBorder">
+                    <div id="portrait"></div>
+                </div>
+            </div>
+        </section>
+        <div id="AboutMe" class="jumpLocation"></div>
+        <section id="aboutMeSection">
+            <div id="aboutMeTextContent">
+                <div class="sectionTitle">
+                    <h1>About Me</h1>
+                    <img src="/assets/img/sectionDividerLine.svg" />
+                </div>
+                <p>
+                    Hi!  I'm Connor!  I'm a full stack software engineer from Woodside, CA studying Computer Science at the University of California, Berkeley.
+                    As far as software development goes, I've been passionate about the trade dating all the way back to when I was 5 - yep I have been a complete
+                    tech nerd for my entire life, and I wouldn't have it any other way.  All that said, my life is far from just computers!  Besides software development,
+                    I am super passionate about photography, psychology, cars, LGBTQ community engagement, weightlifting, music, and travel.  If you're interested in
+                    my profile or just want to say hello, please do so <a href="#Contact">here</a>!  I look forward to hearing from you!
+                </p>
+            </div>
+            <div class="iconSection">
+                <h2>My Languages</h2>
+                <div language class="icons">
+                    <template iconTemplate>
+                        <div class="icon">
+                            <img src="Source Location" />
+                            <p>Language Name</p>
+                        </div>
+                    </template>
+                </div>
+            </div>
+            <div class="iconSection">
+                <h2>My Utilities</h2>
+                <div utility class="icons">
+                    <template iconTemplate>
+                        <div class="icon">
+                            <img src="Source Location" />
+                            <p>Language Name</p>
+                        </div>
+                    </template>
+                </div>
+            </div>
+            <script src="/assets/js/icons.js" type="module"></script>
+            <span id="AboutMeUp"></div>
+        </section>
 
-    <!-- update the version number as needed -->
-    <script defer src="/__/firebase/9.14.0/firebase-app-compat.js"></script>
-    <!-- include only the Firebase features as you need -->
-    <script defer src="/__/firebase/9.14.0/firebase-auth-compat.js"></script>
-    <script defer src="/__/firebase/9.14.0/firebase-database-compat.js"></script>
-    <script defer src="/__/firebase/9.14.0/firebase-firestore-compat.js"></script>
-    <script defer src="/__/firebase/9.14.0/firebase-functions-compat.js"></script>
-    <script defer src="/__/firebase/9.14.0/firebase-messaging-compat.js"></script>
-    <script defer src="/__/firebase/9.14.0/firebase-storage-compat.js"></script>
-    <script defer src="/__/firebase/9.14.0/firebase-analytics-compat.js"></script>
-    <script defer src="/__/firebase/9.14.0/firebase-remote-config-compat.js"></script>
-    <script defer src="/__/firebase/9.14.0/firebase-performance-compat.js"></script>
-    <!-- 
-      initialize the SDK after all desired features are loaded, set useEmulator to false
-      to avoid connecting the SDK to running emulators.
-    -->
-    <script defer src="/__/firebase/init.js?useEmulator=true"></script>
+        <div id="Experience" class="jumpLocation"></div>
+        <section id="experienceSection">
+            <div class="sectionTitle">
+                <h1>Experience</h1>
+                <img src="/assets/img/sectionDividerLine.svg" />
+            </div>
+            <div id="experienceBoxes">
+                <template experienceBoxTemplate>
+                    <div class="rainbowBorder">
+                        <div class="experienceBox">
+                            <div class="fakeNavBar">
+                                <div class="fakeNavBarItem red"></div>
+                                <div class="fakeNavBarItem yellow"></div>
+                                <div class="fakeNavBarItem green"></div>
+                            </div>
+                            <img class="experienceLogo" src="COMPANY IMAGE" />
+                            <h2>Title</h2>
+                            <ul>
+                                <template experienceSubItemTemplate>
+                                    <li>
+                                        <p>
+                                            <strong class="experienceSubtitle"></strong><strong class="locationSubtitle"></strong><span class="experienceCopy"></span>
+                                        </p>
+                                    </li>
+                                </template>
+                            </ul>
+                        </div>
+                    </div>
+                </template>
+            </div>
+            <div id="ExperienceUp"></div>
+        </section>
 
-    <style media="screen">
-      body { background: #ECEFF1; color: rgba(0,0,0,0.87); font-family: Roboto, Helvetica, Arial, sans-serif; margin: 0; padding: 0; }
-      #message { background: white; max-width: 360px; margin: 100px auto 16px; padding: 32px 24px; border-radius: 3px; }
-      #message h2 { color: #ffa100; font-weight: bold; font-size: 16px; margin: 0 0 8px; }
-      #message h1 { font-size: 22px; font-weight: 300; color: rgba(0,0,0,0.6); margin: 0 0 16px;}
-      #message p { line-height: 140%; margin: 16px 0 24px; font-size: 14px; }
-      #message a { display: block; text-align: center; background: #039be5; text-transform: uppercase; text-decoration: none; color: white; padding: 16px; border-radius: 4px; }
-      #message, #message a { box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24); }
-      #load { color: rgba(0,0,0,0.4); text-align: center; font-size: 13px; }
-      @media (max-width: 600px) {
-        body, #message { margin-top: 0; background: white; box-shadow: none; }
-        body { border-top: 16px solid #ffa100; }
-      }
-    </style>
-  </head>
-  <body>
-    <div id="message">
-      <h2>Welcome</h2>
-      <h1>Firebase Hosting Setup Complete</h1>
-      <p>You're seeing this because you've successfully setup Firebase Hosting. Now it's time to go build something extraordinary!</p>
-      <a target="_blank" href="https://firebase.google.com/docs/hosting/">Open Hosting Documentation</a>
-    </div>
-    <p id="load">Firebase SDK Loading&hellip;</p>
+        <div id="Portfolio" class="jumpLocation"></div>
+        <section id="portfolioSection">
+            <div class="sectionTitle">
+                <h1>Portfolio</h1>
+                <img src="/assets/img/sectionDividerLine.svg" />
+            </div>
+            <div id="portfolioItems">
+                <template portfolioItemTemplate>
+                    <div class="rainbowBorder">
+                        <div class="portfolioItem">
+                                <h2>Title</h2>
+                                <p>Lorem ipsum dolor sit amet consectetur. Et phasellus in semper enim cursus eu. Sed amet ac netus aliquet. Felis dui ac
+                                id mollis neque leo donec eleifend donec. Accumsan leo pellentesque tellus diam etiam arcu eget tempor. Vitae et tellus
+                                maecenas donec blandit tortor ligula quis integer.</p>
+                            <div class="languages">
+                                <template languageBoxTemplate>
+                                    <div class="language">Language</div>
+                                </template>
+                        </div>
+                    </div>
+                </template>
+            </div>
+            <div id="PortfolioUp"></div>
+        </section>
 
-    <script>
-      document.addEventListener('DOMContentLoaded', function() {
-        const loadEl = document.querySelector('#load');
-        // // 🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥
-        // // The Firebase SDK is initialized and available here!
-        //
-        // firebase.auth().onAuthStateChanged(user => { });
-        // firebase.database().ref('/path/to/ref').on('value', snapshot => { });
-        // firebase.firestore().doc('/foo/bar').get().then(() => { });
-        // firebase.functions().httpsCallable('yourFunction')().then(() => { });
-        // firebase.messaging().requestPermission().then(() => { });
-        // firebase.storage().ref('/path/to/ref').getDownloadURL().then(() => { });
-        // firebase.analytics(); // call to activate
-        // firebase.analytics().logEvent('tutorial_completed');
-        // firebase.performance(); // call to activate
-        //
-        // // 🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥
+        <div id="Contact" class="jumpLocation"></div>
+        <section id="contactSection">
+            <div class="sectionTitle">
+                <h1>Say Hello!</h1>
+                <img src="/assets/img/sectionDividerLine.svg" />
+            </div>
+            <form method="POST" action="/assets/php/contact.php" autocomplete="off">
+                <div id="formIntro">
+                    <div class="shortInputs">
+                        <div class="inputBox">
+                            <input type="text" name="firstName" required="true" />
+                            <label><strong>* </strong>First Name</label>
+                        </div>
+                        <div class="inputBox">
+                            <input type="text" name="lastName" required="true" />
+                            <label><strong>* </strong>Last Name</label>
+                        </div>
+                        <div class="inputBox">
+                            <input type="text" name="email" required="true" />
+                            <label><strong>* </strong>Email</label>
+                        </div>
+                        <div class="inputBox">
+                            <input type="text" name="phone" required="false" />
+                            <label>Phone Number</label>
+                        </div>
+                    </div>
+                </div>
+                <div id="formConclusion">
+                    <textarea name="message" rows="5" placeholder="Message"></textarea>
+                    <template submissionMessageTemplate>
+                        <div class="messageType"><strong>messageType</strong><span>: Message</span></div>
+                    </template>
+                    <button type="submit" class="accentButton">Submit</button>
+                </div>
+            </form>
+        </section>
 
-        try {
-          let app = firebase.app();
-          let features = [
-            'auth', 
-            'database', 
-            'firestore',
-            'functions',
-            'messaging', 
-            'storage', 
-            'analytics', 
-            'remoteConfig',
-            'performance',
-          ].filter(feature => typeof app[feature] === 'function');
-          loadEl.textContent = `Firebase SDK loaded with ${features.join(', ')}`;
-        } catch (e) {
-          console.error(e);
-          loadEl.textContent = 'Error loading the Firebase SDK, check the console.';
-        }
-      });
-    </script>
-  </body>
+        <div style="position: relative; height:90px;">
+            <footer>
+                <div class="hfContent">
+                    <div class="socialIcons">
+                        <a href="https://github.com/Connor-Bernard">
+                            <img src="/assets/img/socialIcons/Github Logo.png" alt="GitHub access link">
+                        </a>
+                        <a href="https://www.linkedin.com/in/connorbernard/">
+                            <img src="/assets/img/socialIcons/Linkedin Logo.png" alt="LinkedIn access link">
+                        </a>
+                        <a href="https://bitbucket.org/connor-bernard/">
+                            <img src="/assets/img/socialIcons/Bitbucket Logo.png" alt="BitBucket access link">
+                        </a>
+                        <a href="mailto:connorbernard@berkeley.edu">
+                            <img src="/assets/img/socialIcons/Mail Symbol.png" alt="Email access link">
+                        </a>
+                    </div>
+                    <nav class="footerNav">
+                        <div class="rainbowHover">
+                            <div class="navItem">
+                                <a href="#top">Home</a>
+                            </div>
+                        </div>
+                        <div class="rainbowHover">
+                            <div class="navItem">
+                                <a href="#AboutMe">About Me</a>
+                            </div>
+                        </div>
+                        <div class="rainbowHover">
+                            <div class="navItem">
+                                <a href="#Experience">Experience</a>
+                            </div>
+                        </div>
+                        <div class="rainbowHover">
+                            <div class="navItem">
+                                <a href="#Portfolio">Portfolio</a>
+                            </div>
+                        </div>
+                        <div class="rainbowHover">
+                            <div class="navItem">
+                                <a href="#Contact">Contact</a>
+                            </div>
+                        </div>
+                    </nav>
+                </div>
+            </footer>
+        </div>
+        <script src="/assets/js/master.js"></script>
+        <script src="/assets/js/noframework.waypoints.min.js"></script>
+        <script src="/assets/js/waypoints.js"></script>
+        <script src="/assets/js/experience.js" defer></script>
+        <script src="/assets/js/portfolio.js" defer></script>
+        <script src="/assets/js/contact.js"></script>
+        <script type="module">
+            // Import the functions you need from the SDKs you need
+            import { initializeApp } from "https://www.gstatic.com/firebasejs/9.14.0/firebase-app.js";
+            import { getAnalytics } from "https://www.gstatic.com/firebasejs/9.14.0/firebase-analytics.js";
+            // TODO: Add SDKs for Firebase products that you want to use
+            // https://firebase.google.com/docs/web/setup#available-libraries
+
+            // Your web app's Firebase configuration
+            // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+            const firebaseConfig = {
+                apiKey: "AIzaSyAatMT5UKjG4NDRbsVU41-g4a24Adnz804",
+                authDomain: "connorbernarddev.firebaseapp.com",
+                projectId: "connorbernarddev",
+                storageBucket: "connorbernarddev.appspot.com",
+                messagingSenderId: "838041937464",
+                appId: "1:838041937464:web:3b4190404eac821ae0e8cd",
+                measurementId: "G-X530E89GZZ"
+            };
+
+            // Initialize Firebase
+            const app = initializeApp(firebaseConfig);
+            const analytics = getAnalytics(app);
+        </script>
+    </body>
 </html>
