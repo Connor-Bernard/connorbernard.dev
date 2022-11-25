@@ -18,7 +18,6 @@ function updateIcons(){
  * @param {JSON Object Array} iconData 
  */
 function populateLanguageField(iconData){
-    const windowSize = window.innerWidth;
     const template = document.querySelector("[iconTemplate]");
     let insertLocation = null;
     iconData.forEach((element, i) => {
@@ -26,8 +25,9 @@ function populateLanguageField(iconData){
             insertLocation = document.querySelector(`[${element["type"]}]`);
         }
         const currIconTemplate = template.content.cloneNode(true).children[0];
-        currIconTemplate.querySelector("p").textContent = element["name"];
-        currIconTemplate.querySelector("img").src = element["link"];
+        currIconTemplate.querySelector("p").textContent = element.name;
+        currIconTemplate.querySelector("img").src = element.link;
+        currIconTemplate.querySelector("img").alt = `${element.name} Icon`;
         insertLocation.appendChild(currIconTemplate);
     });
     updateIcons();

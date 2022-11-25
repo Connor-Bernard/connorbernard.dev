@@ -10,14 +10,17 @@ function populateExperienceField(experienceData){
         const currExperienceTemplate = experienceTemplate.content.cloneNode(true).children[0];
         const subItemInjectPoint = currExperienceTemplate.querySelector("ul");
         currExperienceTemplate.querySelector("img").src = experience["companyImageLink"];
-        currExperienceTemplate.querySelector("h2").textContent = experience["position"];
+        currExperienceTemplate.querySelector("h3").textContent = experience["position"];
         experience["content"].forEach(subItem => {
             const currSubItemTemplate = subItemTemplate.content.cloneNode(true).children[0];
             currSubItemTemplate.querySelectorAll("strong")[0].textContent = `${subItem["subtitle"]}`;
             if (window.innerWidth > 470) {
                 const location = subItem["location"];
+                const locationField = currSubItemTemplate.querySelectorAll("strong")[1];
                 if(location){
-                    currSubItemTemplate.querySelectorAll("strong")[1].textContent = ` @ ${location}`;
+                    locationField.textContent = ` @ ${location}`;
+                } else {
+                    locationField.style.display = "none";
                 }
                 currSubItemTemplate.querySelector("span").textContent = `: ${subItem["description"]}`;
             }
@@ -72,4 +75,4 @@ fetch("/assets/json/experiences.json").then(response => {
 
 addEventListener("resize", () => {
     updateCopy();
-})
+});

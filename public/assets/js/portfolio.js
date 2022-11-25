@@ -8,7 +8,7 @@ function populatePortfolio(portfolioData){
     const languageBoxTemplate = portfolioItemTemplate.content.querySelector("[languageBoxTemplate]");
     portfolioData.forEach(portfolioElement => {
         const currPortfolioItemTemplate = portfolioItemTemplate.content.cloneNode(true).children[0];
-        currPortfolioItemTemplate.querySelector("h2").textContent = portfolioElement.title;
+        currPortfolioItemTemplate.querySelector("h3").textContent = portfolioElement.title;
         currPortfolioItemTemplate.querySelector("p").textContent = portfolioElement.description;
         const languageInjectPoint = currPortfolioItemTemplate.querySelector(".languages");
         portfolioElement.languages.forEach(language => {

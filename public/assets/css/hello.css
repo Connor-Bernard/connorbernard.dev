@@ -9,6 +9,7 @@
     position:absolute;
     display:flex;
     flex-direction:column;
+    justify-content: space-between;
 }
 .textGradient2{
     width:fit-content;

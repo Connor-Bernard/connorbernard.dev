@@ -25,7 +25,7 @@ html::-webkit-scrollbar{
     display:none;
 }
 
-p, div, h1, h2, input, textarea{
+p, div, h1, h2, h3, input, textarea{
     margin:0;
     color:white;
     font-family:var(--copy-font);
@@ -34,13 +34,13 @@ p, div, h1, h2, input, textarea{
 a{
     color:var(--accent);
 }
-h1{
+h1, h2{
     font-family:var(--header-font);
     font-style:normal;
     font-weight:700;
     font-size:64px;
 }
-h2{
+h3{
     font-family:var(--header-font);
     font-style:normal;
     font-weight:700;
@@ -208,7 +208,7 @@ header{
     align-items:center;
     margin-bottom:80px;
 }
-.sectionTitle > h1{
+.sectionTitle > h2{
     margin-bottom:5px;
 }
 
