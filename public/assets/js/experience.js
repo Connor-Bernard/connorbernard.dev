@@ -1,5 +1,5 @@
 /**
- * Populates the content in the experience blocks
+ * Populates the content in the experience blocks using the HTML template
  * @param {JSON Array} experienceData 
  */
 function populateExperienceField(experienceData){
@@ -35,6 +35,9 @@ function populateExperienceField(experienceData){
     });
 }
 
+/**
+ * Updates the copy of the experience elements depending on screen width.
+ */
 function updateCopy(){
     if(window.innerWidth < 425){
         document.querySelectorAll(".experienceCopy").forEach(copySection => {

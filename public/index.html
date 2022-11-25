@@ -105,6 +105,7 @@
                     I am super passionate about photography, psychology, cars, LGBTQ community engagement, weightlifting, music, and travel.  If you're interested in
                     my profile or just want to say hello, please do so <a href="#Contact">here</a>!  I look forward to hearing from you!
                 </p>
+                <button id="testButton">testme</button>
             </div>
             <div class="iconSection">
                 <h2>My Languages</h2>
@@ -196,7 +197,7 @@
                 <h1>Say Hello!</h1>
                 <img src="/assets/img/sectionDividerLine.svg" />
             </div>
-            <form method="POST" action="/assets/php/contact.php" autocomplete="off">
+            <form autocomplete="off">
                 <div id="formIntro">
                     <div class="shortInputs">
                         <div class="inputBox">
@@ -220,7 +221,7 @@
                 <div id="formConclusion">
                     <textarea name="message" rows="5" placeholder="Message"></textarea>
                     <template submissionMessageTemplate>
-                        <div class="messageType"><strong>messageType</strong><span>: Message</span></div>
+                        <div class="formResponseMessage"><strong>messageType</strong><span>: Message</span></div>
                     </template>
                     <button type="submit" class="accentButton">Submit</button>
                 </div>
@@ -274,26 +275,11 @@
                 </div>
             </footer>
         </div>
-        <script src="/assets/js/master.js"></script>
-        <script src="/assets/js/noframework.waypoints.min.js"></script>
-        <script src="/assets/js/waypoints.js"></script>
+        <script src="/assets/js/master.js" defer></script>
+        <script src="/assets/js/noframework.waypoints.min.js" defer></script>
+        <script src="/assets/js/waypoints.js" defer></script>
         <script src="/assets/js/experience.js" defer></script>
         <script src="/assets/js/portfolio.js" defer></script>
-        <script src="/assets/js/contact.js"></script>
-        <script type="module">
-            import { initializeApp } from "https://www.gstatic.com/firebasejs/9.14.0/firebase-app.js";
-            import { getAnalytics } from "https://www.gstatic.com/firebasejs/9.14.0/firebase-analytics.js";
-            const firebaseConfig = {
-                apiKey: "AIzaSyAatMT5UKjG4NDRbsVU41-g4a24Adnz804",
-                authDomain: "connorbernarddev.firebaseapp.com",
-                projectId: "connorbernarddev",
-                storageBucket: "connorbernarddev.appspot.com",
-                messagingSenderId: "838041937464",
-                appId: "1:838041937464:web:3b4190404eac821ae0e8cd",
-                measurementId: "G-X530E89GZZ"
-            };
-            const app = initializeApp(firebaseConfig);
-            const analytics = getAnalytics(app);
-        </script>
+        <script src="/assets/js/contact.js" type="module" defer></script>
     </body>
 </html>

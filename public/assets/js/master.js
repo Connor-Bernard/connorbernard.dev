@@ -1,7 +1,7 @@
 /**
  * Toggles the provided hamburger.
- * @param {HTML Element} hamburger 
- * @param {HTML Element} navMenu 
+ * @param {HTML Element} hamburger
+ * @param {HTML Element} navMenu
  */
 function toggleHamburger(hamburger, navMenu){
     const active = hamburger.classList.contains("active");
@@ -10,7 +10,7 @@ function toggleHamburger(hamburger, navMenu){
         navMenu.classList.remove("active");
     } else {
         hamburger.classList.add("active");
-        navMenu.classList.add("active"); 
+        navMenu.classList.add("active");
     }
 }
 
