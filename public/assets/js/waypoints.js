@@ -1,6 +1,6 @@
 /**
  * Updates the actively viewed section header color to blue using waypoints
- * @param {HTML element} a header representation of curenetly displayed section
+ * @param {HTML element} a
  */
 function updateNavMenuActive(a=null){
     document.querySelectorAll(".navItem > a").forEach(element => {
