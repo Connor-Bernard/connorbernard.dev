@@ -9,7 +9,7 @@
         ]
     },
     {
-        "title": "EmoteWell API",
+        "title": "Emotewell API",
         "description": "Developed an REST API for handling mobile app payment authentication and verification through Apple using Bearer authenticated HTTP requests, public-key cryptography, and SQL for accessing and modifying PHPMyAdmin database.",
         "languages":[
             "PHP",
