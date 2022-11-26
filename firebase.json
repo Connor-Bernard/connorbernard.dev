@@ -18,5 +18,16 @@
   },
   "remoteconfig": {
     "template": "remoteconfig.template.json"
-  }
+  },
+  "headers": [
+    {
+      "source": "**/*.@(webp|png|jpg|jpeg|gif)",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "max-age=7200"
+        }
+      ]
+    }
+  ]
 }
