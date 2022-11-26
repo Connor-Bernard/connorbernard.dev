@@ -30,6 +30,7 @@
     justify-content:center;
     align-items:center;
 }
+
 #portraitBorder{
     position:absolute;
     background:var(--gradient-3);
@@ -78,7 +79,7 @@
     #helloButtonSection{
         flex-wrap:wrap;
     }
-    #helloSection .halfSection:nth-child(2){
+    #helloSection > .halfSection:nth-child(2){
         display:none;
     }
 }

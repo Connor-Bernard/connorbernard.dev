@@ -15,17 +15,15 @@ function populateExperienceField(experienceData){
         currExperienceTemplate.querySelector("h3").textContent = experience["position"];
         experience["content"].forEach(subItem => {
             const currSubItemTemplate = subItemTemplate.content.cloneNode(true).children[0];
-            currSubItemTemplate.querySelectorAll("strong")[0].textContent = `${subItem["subtitle"]}`;
-            if (window.innerWidth > 470) {
-                const location = subItem["location"];
-                const locationField = currSubItemTemplate.querySelectorAll("strong")[1];
-                if(location){
-                    locationField.textContent = ` @ ${location}`;
-                } else {
-                    locationField.style.display = "none";
-                }
-                currSubItemTemplate.querySelector("span").textContent = `: ${subItem["description"]}`;
+            const locationField = currSubItemTemplate.querySelectorAll("strong")[1];
+            const location = subItem["location"];
+            if (location) {
+                locationField.textContent = ` @ ${location}`;
+            } else {
+                locationField.style.display = "none";
             }
+            currSubItemTemplate.querySelectorAll("strong")[0].textContent = `${subItem["subtitle"]}`;
+            currSubItemTemplate.querySelector("span").textContent = `: ${subItem["description"]}`;
             subItemInjectPoint.appendChild(currSubItemTemplate);
         });
         experienceInjectPoint.appendChild(currExperienceTemplate);
@@ -38,13 +36,14 @@ function populateExperienceField(experienceData){
         //     }
         // });
     });
+    updateCopy();
 }
 
 /**
  * Updates the copy of the experience elements depending on screen width.
  */
 function updateCopy(){
-    if(window.innerWidth < 425){
+    if(window.innerWidth < 470){
         document.querySelectorAll(".experienceCopy").forEach(copySection => {
             copySection.style.display = "none";
         });
