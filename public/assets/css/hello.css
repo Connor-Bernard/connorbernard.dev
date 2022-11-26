@@ -31,7 +31,7 @@
     align-items:center;
 }
 #portraitBorder{
-    position:relative;
+    position:absolute;
     background:var(--gradient-3);
     width:max(35vw, 35vh);
     height:max(35vw, 35vh);
@@ -43,7 +43,7 @@
     height:98%;
     top:1%;
     left:1%;
-    background-image:url("/assets/img/portrait-min.jpg");
+    background-image:url("/assets/img/portrait-min.webp");
     background-size:150%;
     background-position:45% 80%;
     border-radius:100%;
