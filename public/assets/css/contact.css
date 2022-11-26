@@ -32,7 +32,7 @@
     border-color:white;
 }
 
-.inputBox input:focus ~ label, .inputBox input:valid ~ label{
+.notRequired > .hasInput, .inputBox input:focus ~ label, .inputBox input:not(#contactPhone):valid ~ label{
     top:-25px;
     left:0;
     color:var(--accent);

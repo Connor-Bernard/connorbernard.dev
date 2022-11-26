@@ -58,3 +58,17 @@ contactForm.addEventListener("submit", (e) => {
         messageInjectPoint.appendChild(messageTemplate);
     })
 });
+
+/**
+ * Handle input monitoring and style updates for non-required fields.
+ */
+contactForm.querySelectorAll(".notRequired").forEach(e => {
+    e.addEventListener("change", (event) => {
+        console.log(e);
+        if (event.target.value) {
+            e.querySelector("label").classList.add("hasInput");
+        } else {
+            e.querySelector("label").classList.remove("hasInput");
+        }
+    });
+})
