@@ -206,25 +206,25 @@
                 <div id="formIntro">
                     <div class="shortInputs">
                         <div class="inputBox">
-                            <input type="text" name="firstName" id="contactFirstName" required="true" />
+                            <input type="text" name="firstName" id="contactFirstName" required />
                             <label for="contactFirstName"><strong>* </strong>First Name</label>
                         </div>
                         <div class="inputBox">
-                            <input type="text" name="lastName" id="contactLastName" required="true" />
+                            <input type="text" name="lastName" id="contactLastName" required />
                             <label for="contactLastName"><strong>* </strong>Last Name</label>
                         </div>
                         <div class="inputBox">
-                            <input type="text" name="email" id="contactEmail" required="true" />
+                            <input type="text" name="email" id="contactEmail" required />
                             <label for="contactEmail"><strong>* </strong>Email</label>
                         </div>
-                        <div class="inputBox">
-                            <input type="text" name="phone" id="contactPhone" required="false" />
+                        <div class="inputBox notRequired">
+                            <input type="text" name="phone" id="contactPhone" />
                             <label for="contactPhone">Phone Number</label>
                         </div>
                     </div>
                 </div>
                 <div id="formConclusion">
-                    <textarea name="message" rows="5" placeholder="Message"></textarea>
+                    <textarea name="message" rows="5" placeholder="Message" required></textarea>
                     <template submissionMessageTemplate>
                         <div class="formResponseMessage"><strong>messageType</strong><span>: Message</span></div>
                     </template>
