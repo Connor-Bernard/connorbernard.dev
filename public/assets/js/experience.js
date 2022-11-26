@@ -9,7 +9,9 @@ function populateExperienceField(experienceData){
     experienceData.forEach(experience => {
         const currExperienceTemplate = experienceTemplate.content.cloneNode(true).children[0];
         const subItemInjectPoint = currExperienceTemplate.querySelector("ul");
-        currExperienceTemplate.querySelector("img").src = experience["companyImageLink"];
+        const companyImage = currExperienceTemplate.querySelector("img");
+        companyImage.src = experience["companyImageLink"];
+        companyImage.alt = `${experience.company} logo`;
         currExperienceTemplate.querySelector("h3").textContent = experience["position"];
         experience["content"].forEach(subItem => {
             const currSubItemTemplate = subItemTemplate.content.cloneNode(true).children[0];
