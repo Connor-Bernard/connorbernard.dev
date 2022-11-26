@@ -1,7 +1,7 @@
 [
     {
         "company": "Emotewell",
-        "companyImageLink": "/assets/img/companyLogos/EW Logo.png",
+        "companyImageLink": "/assets/img/companyLogos/EW Logo.webp",
         "position": "Software Engineering Tech Lead",
         "content": [
             {
@@ -24,7 +24,7 @@
     },
     {
         "company": "Emotewell",
-        "companyImageLink":"/assets/img/companyLogos/EW Logo.png",
+        "companyImageLink":"/assets/img/companyLogos/EW Logo.webp",
         "position": "Software Engineering Intern",
         "content": [
             {
@@ -47,7 +47,7 @@
     },
     {
         "company": "Berkeley x Junipero Serra High School",
-        "companyImageLink": "/assets/img/companyLogos/Berkeley x Serra.png",
+        "companyImageLink": "/assets/img/companyLogos/Berkeley x Serra.webp",
         "position": "Computer Science Tutor",
         "content": [
             {
