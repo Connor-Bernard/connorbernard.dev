@@ -10,7 +10,7 @@
     },
     {
         "title": "Emotewell API",
-        "description": "Developed an REST API using PHP with endpoints for handling mobile app payment authentication and verification through Apple via Bearer authenticated HTTP requests, public-key cryptography through JTW tokens, and SQL for accessing and modifying a PHPMyAdmin database.",
+        "description": "Developed an REST API using PHP with endpoints for handling mobile app payment authentication and verification through Apple via Bearer authenticated HTTP requests, public-key cryptography through JTW tokens, and SQL for accessing and modifying a MySQL database.",
         "languages":[
             "PHP",
             "HTTP",
@@ -18,10 +18,22 @@
         ]
     },
     {
-        "title": "Enigma Machine",
-        "description": "Applied advanced applications of data structures to redesign the Enigma machine used in WWII with fully functional file encryption and decryption algorithms",
+        "title": "Intelligent Grade Portal ",
+        "description": "Developed a secure, intelligent grade portal using Node to create a REST API and handle OAuth2.0 authentication and React with Material UI for the front end to allow professors to easily update their grades and enable students to project their future success in the class.",
+        "languages":[
+            "Node",
+            "React",
+            "HTTP",
+            "Material UI"
+        ]
+    },
+    {
+        "title": "AI Graph Clustering",
+        "description": "Used machine-level parallelism as well as artifical intelligence techniques such as simulated aneiling to preform optimal node clustering on hundreds of graphs each with thousands of nodes in accordance to several nonlinear constraints.",
         "languages": [
-            "Java"
+            "Python",
+            "C",
+            "Bash"
     ]
     },
     {
@@ -40,13 +52,6 @@
             "CSS",
             "JavaScript",
             "PHP"
-        ]
-    },
-    {
-        "title": "Snake (Game)",
-        "description":"Used C to recreate the popular game Snake with added functionality for parallel snake instances and a fully operational command-line UI.  Added further support for augmented board types including non-unform, non-rectangular boards.",
-        "languages":[
-            "C"
         ]
     }
 ]

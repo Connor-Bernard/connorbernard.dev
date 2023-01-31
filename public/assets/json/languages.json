@@ -16,6 +16,21 @@
     },
     {
         "type": "language",
+        "name": "JavaScript",
+        "link": "/assets/img/languages/JS Icon.webp"
+    },
+    {
+        "type": "language",
+        "name": "Node.js",
+        "link": "/assets/img/languages/Node Icon.webp"
+    },
+    {
+        "type": "language",
+        "name": "React.js",
+        "link": "/assets/img/languages/React Icon.webp"
+    },
+    {
+        "type": "language",
         "name": "HTML",
         "link": "/assets/img/languages/HTML Icon.webp"
     },
@@ -23,11 +38,6 @@
         "type": "language",
         "name": "CSS",
         "link": "/assets/img/languages/CSS Icon.webp"
-    },
-    {
-        "type": "language",
-        "name": "JavaScript",
-        "link": "/assets/img/languages/JS Icon.webp"
     },
     {
         "type": "language",
@@ -48,15 +58,5 @@
         "type": "language",
         "name": "Unix",
         "link": "/assets/img/languages/Unix Icon.webp"
-    },
-    {
-        "type": "language",
-        "name": "Markdown",
-        "link": "/assets/img/languages/Markdown Icon.webp"
-    },
-    {
-        "type": "language",
-        "name": "LaTeX",
-        "link": "/assets/img/languages/LaTeX Icon.webp"
     }
 ]

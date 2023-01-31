@@ -17,7 +17,7 @@
     margin:3px;
     min-height:870px;
 }
-.experienceBox > h2{
+.experienceBox > h3{
     text-align:center;
 }
 
@@ -64,7 +64,7 @@
         min-height: 0;
         padding:20px;
     }
-    .experienceBox > h2{
+    .experienceBox > h3{
         font-size: 26px;
     }
     .experienceSubtitle{
