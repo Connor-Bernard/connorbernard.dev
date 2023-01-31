@@ -25,14 +25,14 @@
     {
         "company": "University of California, Berkeley",
         "companyImageLink": "/assets/img/companyLogos/Berkeley.webp",
-        "position": "Computer Science Education Researcher and Group Lead",
+        "position": "Computer Science Education Research Assistant",
         "content": [
             {
                 "subtitle": "Group Lead",
                 "description": "Built and led a team of computer engineers at UC Berkeley on a research project dedicated to creating tools to facilitate integration of these fundamental grading techniques. The project was developed for integration locally within the CS curriculum at UC Berkeley but with the intent and design adaptability to expand usage to other curriculums and universities in an effort to promote equality of opportunity throughout academia."
             },
             {
-                "subtitle": "Researcher",
+                "subtitle": "Research Assistant",
                 "description": "Conducted research in Computer Science education with developments in web infrastructure and approaches to naturalizing grading processes across a variety of demographics optimizing for student success by exploring the capacity implementing \"superscoring\" in a standard classroom environment. Also explored exam-level equality by considering the omission of a traditional time-limit for exams."
             }
         ]
