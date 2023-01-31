@@ -29,7 +29,7 @@
     },
     {
         "title": "AI Graph Clustering",
-        "description": "Used machine-level parallelism as well as artifical intelligence techniques such as simulated aneiling to preform optimal node clustering on hundreds of graphs each with thousands of nodes in accordance to several nonlinear constraints.",
+        "description": "Used machine-level parallelism as well as artificial intelligence techniques such as simulated annealing to preform optimal node clustering on hundreds of graphs each with thousands of nodes in accordance to several nonlinear constraints.",
         "languages": [
             "Python",
             "C",
