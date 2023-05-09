@@ -10,7 +10,7 @@
     },
     {
         "title": "Emotewell API",
-        "description": "Developed a REST API using PHP with endpoints for handling mobile app payment authentication and verification through Apple via Bearer authenticated HTTP requests, public-key cryptography through JTW tokens, and SQL for accessing and modifying a MySQL database.",
+        "description": "Developed a REST API using PHP with endpoints for handling mobile app payment authentication and verification through Apple via Bearer authenticated HTTP requests, public-key cryptography through JWT tokens, and SQL for accessing and modifying a MySQL database.",
         "languages":[
             "PHP",
             "HTTP",
