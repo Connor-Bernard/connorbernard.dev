@@ -1,5 +1,47 @@
 [
     {
+        "company": "Cisco",
+        "companyImageLink": "/assets/img/companyLogos/Cisco Secure.webp",
+        "position": "Software Engineering Intern",
+        "content": [
+            {
+                "subtitle": "Umbrella FedRAMP",
+                "description": "Developed multiple secure endpoints for a government and commercial cloud security API in PHP used to protect 840,000 networks, 67 million mailboxes, and 87 million endpoints against 7.2 trillion attacks annually."
+            },
+            {
+                "subtitle": "Umbrella BFG",
+                "description": "Developed both internal and customer-facing dashboard pages and UI improvements using React JS and tested using the Jest framework."
+            },
+            {
+                "subtitle": "Secure Test Development",
+                "description": "Used PHPUnit to develop unit tests for several CRUD endpoints and Python for smoke testing them to ensure functionality and security prior to deployment in production environment."
+            },
+            {
+                "subtitle": "Mentor",
+                "description": "Mentored two computer science students through a series of personal projects to help them develop a better understanding of logical programming and programming fundamentals."
+            }
+        ]
+    },
+    {
+        "company": "Finish My Fit",
+        "companyImageLink": "/assets/img/companyLogos/FMF.webp",
+        "position": "Founding Engineer",
+        "content":[
+            {
+                "subtitle": "Founder",
+                "description": "Planned and coordinated efforts to bring the idea of an AI driven outfit marketplace to life through a webapp that applies GPT-3.5-turbo to generate prompted outfit recommendations from a database of affiliates' products."
+            },
+            {
+                "subtitle": "DevOps Engineer",
+                "description": "Containerized the pre-existing platform and introduced CICD through AWS.  Also outlined the necessary infastructure for cloud hosting including MongoDB database configuration that could be scaled across one or multiple clusters."
+            },
+            {
+                "subtitle": "Web Engineer",
+                "description": "Migrated the pre-existing HTML, CSS, and PyScript website to Next and Node leverging SSR whenever possible.  Also redesigned the UI to more accurately match design prototypes and achieve higher customer satisfaction."
+            }
+        ]
+    },
+    {
         "company": "Emotewell",
         "companyImageLink": "/assets/img/companyLogos/EW Logo.webp",
         "position": "Software Engineering Tech Lead",

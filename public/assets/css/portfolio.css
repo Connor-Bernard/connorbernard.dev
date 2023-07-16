@@ -30,11 +30,24 @@
     border-radius:10px;
 }
 
-@media screen and (max-width:430px){
+.experienceLogo{
+    max-height:100px;
+    width: auto;
+}
+
+@media screen and (max-width:1000px){
+    .portfolioItem{
+        height: fit-content !important;
+    }
+}
+
+@media screen and (max-width:700px){
     .rainbowBorder{
+        width:100%;
         margin:0;
     }
     .portfolioItem{
         padding:20px;
+        height: fit-content !important;
     }
 }

@@ -1,5 +1,14 @@
 [
     {
+        "title": "End-to-End File Sharing Platform",
+        "description": "Used Go to create an end-to-end encrypted file sharing platform like Google Drive with a public-key database TCB and otherwise public storage leveraging RSA PKE, PBKDF, HashKDF, digital signatures, HMACs, and AES-CTR symmetric encryption to ensure IND-CPA, authenticity, and integrity of all private data.",
+        "languages": [
+            "Go",
+            "Markdown",
+            "Ginko"
+        ]
+    },
+    {
         "title": "Streamlined Git Style VCS",
         "description": "Used Java to create a version-control system that mimics some of the features of Git including active directory moderation, file hashing, merge conflict handling, and remote repository interactions.",
         "languages": [
@@ -37,11 +46,13 @@
         ]
     },
     {
-        "title": "Encrypted File Sharing System",
-        "description": "Used Go to create an end-to-end encrypted file sharing platform with a public-key database TCB and otherwise public storage leveraging RSA PKE, PBKDF, HashKDF, digital signatures, HMACs, and AES-CTR symmetric encryption to ensure IND-CPA, authenticity, and integrity of all private data.",
+        "title": "This Website :)",
+        "description": "Used HTML, CSS, and Vanilla JS to create this beauty.  It's all hosted in the back with firebase configured for CICD using GitHub actions.  Oh and I designed it in Figma myself too (though I woulnd't claim to be a designer).",
         "languages": [
-            "Go",
-            "Markdown"
+            "HTML",
+            "CSS",
+            "JS",
+            "Figma"
         ]
     },
     {
