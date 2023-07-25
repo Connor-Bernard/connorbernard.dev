@@ -1,1 +1,65 @@
-function toggleHamburger(e,t){let o=e.classList.contains("active");o?(e.classList.remove("active"),t.classList.remove("active")):(e.classList.add("active"),t.classList.add("active"))}function __initHamburger__(){let e=document.querySelector(".hamburger"),t=document.querySelector("nav");e.onclick=()=>{toggleHamburger(e,t)},addEventListener("resize",o=>{o.target.innerWidth>1024&&e.classList.contains("active")&&(e.classList.remove("active"),t.classList.remove("active"))}),addEventListener("scroll",()=>{window.pageYOffset>=330&&(e.classList.remove("active"),t.classList.remove("active"))})}function populateExperienceField(e){let t=document.querySelector("#experienceBoxes"),o=t.querySelector("[experienceBoxTemplate]"),n=o.content.querySelector("[experienceSubItemTemplate]");e.forEach(e=>{let l=o.content.cloneNode(!0).children[0],r=l.querySelector("ul"),c=l.querySelector("img");c.src=e.companyImageLink,c.alt=`${e.company} logo`,l.querySelector("h3").textContent=e.position,e.content.forEach(e=>{let t=n.content.cloneNode(!0).children[0],o=t.querySelectorAll("strong")[1],l=e.location;l?o.textContent=` @ ${l}`:o.style.display="none",t.querySelectorAll("strong")[0].textContent=`${e.subtitle}`,t.querySelector("span").textContent=`: ${e.description}`,r.appendChild(t)}),t.appendChild(l)}),updateCopy()}function updateCopy(){window.innerWidth<470?document.querySelectorAll(".experienceCopy").forEach(e=>{e.style.display="none"}):document.querySelectorAll(".experienceCopy").forEach(e=>{e.style.display="inline"})}function populatePortfolio(e){let t=document.querySelector("#portfolioItems"),o=t.querySelector("[portfolioItemTemplate]"),n=o.content.querySelector("[languageBoxTemplate]");e.forEach(e=>{let l=o.content.cloneNode(!0).children[0];l.querySelector("h3").textContent=e.title,l.querySelector("p").textContent=e.description;let r=l.querySelector(".languages");e.languages.forEach(e=>{let t=n.content.cloneNode(!0).children[0];t.textContent=e,r.appendChild(t)}),t.appendChild(l)})}function updateSize(){let e=0,t=document.querySelectorAll(".portfolioItem"),o=getComputedStyle(t[0]);getItemWidth=()=>o.width;let n=2*parseFloat(o.padding);t.forEach(t=>{e=Math.max(e,t.clientHeight)}),e-=n,t.forEach(t=>{t.style.height=`${e}px`})}function sleep(e){return new Promise(t=>setTimeout(t,e))}__initHamburger__(),addEventListener("load",()=>{document.querySelector("#loaderPage").style.display="none",document.querySelector("header").style.position="fixed"}),fetch("/assets/json/experiences.json").then(e=>{e.json().then(e=>{populateExperienceField(e)})}),addEventListener("resize",()=>{updateCopy()}),window.addEventListener("resize",e=>{let t=parseFloat(e.target.innerWidth);t>=1e3&&updateSize()}),window.addEventListener("load",async()=>{for(i=0;i<16;i++)try{parseFloat(window.innerWidth)>=1e3&&updateSize();break}catch(e){await sleep(10)}}),fetch("/assets/json/portfolio.json").then(e=>{e.json().then(e=>{populatePortfolio(e)})});
+/**
+ * Toggles the provided hamburger.
+ * @param {HTML Element} hamburger
+ * @param {HTML Element} navMenu
+ */
+function toggleHamburger(hamburger, navMenu){
+    const active = hamburger.classList.contains("active");
+    if(active){
+        hamburger.classList.remove("active");
+        navMenu.classList.remove("active");
+    } else {
+        hamburger.classList.add("active");
+        navMenu.classList.add("active");
+    }
+}
+
+/**
+ * Handles the loading of blur elements.  Prevents from loading outside of
+ * expected loading regions.
+ */
+// function blurHandler(){
+//     const footerBoundingRect = document.querySelector("header").getBoundingClientRect();
+//     document.querySelectorAll(".blur").forEach(blurElement => {
+//         const boundingRect = blurElement.getBoundingClientRect();
+//         while(Math.abs(boundingRect.y) + boundingRect.height < Math.abs(footerBoundingRect.y) + footerBoundingRect.height) {
+//             console.log(Math.abs(boundingRect.y) + boundingRect.height);
+//             boundingRect.y -= boundingRect.height;
+//         }
+//     })
+// }
+
+/**
+ * Initializes the hamburger with all necessary events and listeners.
+ */
+function __initHamburger__(){
+    const hamburger = document.querySelector(".hamburger");
+    const navMenu = document.querySelector("nav");
+    hamburger.onclick = () => {
+        toggleHamburger(hamburger, navMenu);
+    }
+    addEventListener("resize", event => {
+        if (event.target.innerWidth > 1024 && hamburger.classList.contains("active")) {
+            hamburger.classList.remove("active");
+            navMenu.classList.remove("active");
+        }
+    });
+    addEventListener("scroll", () => {
+        if(window.pageYOffset >= 330){
+            hamburger.classList.remove("active");
+            navMenu.classList.remove("active");
+        }
+    });
+}
+
+// document.querySelectorAll(".blur").forEach(blurElement => {
+//     addEventListener("load", () => {
+//         blurHandler();
+//     });
+// });
+__initHamburger__();
+
+addEventListener("load", () => {
+    document.querySelector("#loaderPage").style.display = "none";
+    document.querySelector("header").style.position = "fixed";
+});

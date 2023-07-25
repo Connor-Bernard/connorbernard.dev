@@ -1,5 +1,15 @@
 {
     "workbench.colorCustomizations":{
         
-    }
+    },
+    "cSpell.words": [
+        "resplit",
+        "tablefmt",
+        "termcolor",
+        "Unmarks"
+    ],
+    "[python]": {
+        "editor.defaultFormatter": "ms-python.autopep8"
+    },
+    "python.formatting.provider": "none"
 }

@@ -17,6 +17,10 @@
                 "description": "Used PHPUnit to develop unit tests for several CRUD endpoints and Python for smoke testing them to ensure functionality and security prior to deployment in production environment."
             },
             {
+                "subtitle": "Voltron Docsite",
+                "description": "Developed a team-wide documentation website built on Docusaurous through React."
+            },
+            {
                 "subtitle": "Mentor",
                 "description": "Mentored two computer science students through a series of personal projects to help them develop a better understanding of logical programming and programming fundamentals."
             }
