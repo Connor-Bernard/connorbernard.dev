@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang xml:lang>
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>L17</title>
+  <style>
+html {
+color: #1a1a1a;
+background-color: #fdfdfd;
+}
+body {
+margin: 0 auto;
+max-width: 36em;
+padding-left: 50px;
+padding-right: 50px;
+padding-top: 50px;
+padding-bottom: 50px;
+hyphens: auto;
+overflow-wrap: break-word;
+text-rendering: optimizeLegibility;
+font-kerning: normal;
+}
+@media (max-width: 600px) {
+body {
+font-size: 0.9em;
+padding: 12px;
+}
+h1 {
+font-size: 1.8em;
+}
+}
+@media print {
+html {
+background-color: white;
+}
+body {
+background-color: transparent;
+color: black;
+font-size: 12pt;
+}
+p, h2, h3 {
+orphans: 3;
+widows: 3;
+}
+h2, h3, h4 {
+page-break-after: avoid;
+}
+}
+p {
+margin: 1em 0;
+}
+a {
+color: #1a1a1a;
+}
+a:visited {
+color: #1a1a1a;
+}
+img {
+max-width: 100%;
+}
+svg {
+height: auto;
+max-width: 100%;
+}
+h1, h2, h3, h4, h5, h6 {
+margin-top: 1.4em;
+}
+h5, h6 {
+font-size: 1em;
+font-style: italic;
+}
+h6 {
+font-weight: normal;
+}
+ol, ul {
+padding-left: 1.7em;
+margin-top: 1em;
+}
+li > ol, li > ul {
+margin-top: 0;
+}
+blockquote {
+margin: 1em 0 1em 1.7em;
+padding-left: 1em;
+border-left: 2px solid #e6e6e6;
+color: #606060;
+}
+code {
+font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+font-size: 85%;
+margin: 0;
+hyphens: manual;
+}
+pre {
+margin: 1em 0;
+overflow: auto;
+}
+pre code {
+padding: 0;
+overflow: visible;
+overflow-wrap: normal;
+}
+.sourceCode {
+background-color: transparent;
+overflow: visible;
+}
+hr {
+background-color: #1a1a1a;
+border: none;
+height: 1px;
+margin: 1em 0;
+}
+table {
+margin: 1em 0;
+border-collapse: collapse;
+width: 100%;
+overflow-x: auto;
+display: block;
+font-variant-numeric: lining-nums tabular-nums;
+}
+table caption {
+margin-bottom: 0.75em;
+}
+tbody {
+margin-top: 0.5em;
+border-top: 1px solid #1a1a1a;
+border-bottom: 1px solid #1a1a1a;
+}
+th {
+border-top: 1px solid #1a1a1a;
+padding: 0.25em 0.5em 0.25em 0.5em;
+}
+td {
+padding: 0.125em 0.5em 0.25em 0.5em;
+}
+header {
+margin-bottom: 4em;
+text-align: center;
+}
+#TOC li {
+list-style: none;
+}
+#TOC ul {
+padding-left: 1.3em;
+}
+#TOC > ul {
+padding-left: 0;
+}
+#TOC a:not(:hover) {
+text-decoration: none;
+}
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+
+ul.task-list[class]{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+font-size: inherit;
+width: 0.8em;
+margin: 0 0.8em 0.2em -1.6em;
+vertical-align: middle;
+}
+
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+{ counter-reset: source-line 0; }
+pre.numberSource code > span
+{ position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+{ content: counter(source-line);
+position: relative; left: -1em; text-align: right; vertical-align: baseline;
+border: none; display: inline-block;
+-webkit-touch-callout: none; -webkit-user-select: none;
+-khtml-user-select: none; -moz-user-select: none;
+-ms-user-select: none; user-select: none;
+padding: 0 4px; width: 4em;
+color: #aaaaaa;
+}
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa; padding-left: 4px; }
+div.sourceCode
+{ }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } 
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } 
+code span.at { color: #7d9029; } 
+code span.bn { color: #40a070; } 
+code span.bu { color: #008000; } 
+code span.cf { color: #007020; font-weight: bold; } 
+code span.ch { color: #4070a0; } 
+code span.cn { color: #880000; } 
+code span.co { color: #60a0b0; font-style: italic; } 
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } 
+code span.do { color: #ba2121; font-style: italic; } 
+code span.dt { color: #902000; } 
+code span.dv { color: #40a070; } 
+code span.er { color: #ff0000; font-weight: bold; } 
+code span.ex { } 
+code span.fl { color: #40a070; } 
+code span.fu { color: #06287e; } 
+code span.im { color: #008000; font-weight: bold; } 
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } 
+code span.kw { color: #007020; font-weight: bold; } 
+code span.op { color: #666666; } 
+code span.ot { color: #007020; } 
+code span.pp { color: #bc7a00; } 
+code span.sc { color: #4070a0; } 
+code span.ss { color: #bb6688; } 
+code span.st { color: #4070a0; } 
+code span.va { color: #19177c; } 
+code span.vs { color: #4070a0; } 
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } 
+</style>
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">L17</h1>
+</header>
+<h1 id="testing">Testing</h1>
+<h2 id="tdd-vs-debugging">TDD vs Debugging</h2>
+<table>
+<colgroup>
+<col style="width: 52%" />
+<col style="width: 47%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Conventional</th>
+<th>TDD</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Write 10s of lines, run, hit bug: break out debugger</td>
+<td>Write a few lines, with test first; know immediately if broken</td>
+</tr>
+<tr class="even">
+<td>Insert printf’s to print variables while running repeatedly</td>
+<td>Test short pieces of code using expectations</td>
+</tr>
+<tr class="odd">
+<td>Stop in debugger, tweak/set variables to control code path</td>
+<td>Use mocks and stubs to control code path</td>
+</tr>
+<tr class="even">
+<td>Dammit, I thought for sure I fixed it, now I have to do this all
+again</td>
+<td>Re-run test automatically</td>
+</tr>
+</tbody>
+</table>
+<h2 id="mocks">Mocks</h2>
+<ul>
+<li>Set up the mock with <code>double</code></li>
+<li>Set up stubs for methods with
+<code>allow(&lt;double&gt;).to receive(:&lt;method&gt;).and_return(&lt;return value&gt;)</code></li>
+</ul>
+<h3 id="mock-train-wreck">Mock Train Wreck</h3>
+<ul>
+<li>Have to pass mocks to mocks when chaining values</li>
+<li>Can get super complicated because you keep having to mock
+dependencies of initial mock</li>
+</ul>
+<h2 id="fixtures">Fixtures</h2>
+<ul>
+<li>Fixture ≙ statically preload some known data into database
+tables</li>
+<li>DB wiped and reloaded with fixtures before each spec</li>
+<li>Use cases:
+<ul>
+<li>Truly static data (eg: configuration info that never changes like
+API keys)</li>
+<li>Easy to see all test data in one place</li>
+</ul></li>
+<li>Cons:
+<ul>
+<li>May introduce dependency on fixture data</li>
+</ul></li>
+<li>Usually put in <code>spec/fixtures</code></li>
+<li>Are <code>.yml</code> files</li>
+<li>Eg:</li>
+</ul>
+<div class="sourceCode" id="cb1"><pre class="sourceCode yml"><code class="sourceCode yaml"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Fixture file.</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="fu">milk_movie</span><span class="kw">:</span></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">id</span><span class="kw">:</span><span class="at"> </span><span class="dv">1</span></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">title</span><span class="kw">:</span><span class="at"> Milk</span></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">rating</span><span class="kw">:</span><span class="at"> R</span></span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">release_date</span><span class="kw">:</span><span class="at"> 2008-11-26</span></span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a><span class="fu">documentary_movie</span><span class="kw">:</span></span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">id</span><span class="kw">:</span><span class="at"> </span><span class="dv">2</span></span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">title</span><span class="kw">:</span><span class="at"> Food, Inc.</span></span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">release_date</span><span class="kw">:</span><span class="at"> 2008-09-07</span></span></code></pre></div>
+<div class="sourceCode" id="cb2"><pre class="sourceCode ruby"><code class="sourceCode ruby"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Test file.</span></span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>fixtures <span class="wa">:movies</span></span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>it <span class="vs">&#39;finds movie by title&#39;</span> <span class="cf">do</span></span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>    movie <span class="kw">=</span> movies(<span class="wa">:milk_movie</span>)</span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>    <span class="co"># etc...</span></span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a><span class="cf">end</span></span></code></pre></div>
+<h2 id="factories">Factories</h2>
+<ul>
+<li>Factory ≙ create only what you need per-test</li>
+<li>Can use <code>FactoryBot</code> gem</li>
+<li><code>Faker</code> gem is helpful for generating random fake
+data</li>
+<li>In <code>spec/factories</code></li>
+<li>Are <code>.rb</code> files</li>
+<li>Eg:</li>
+</ul>
+<div class="sourceCode" id="cb3"><pre class="sourceCode ruby"><code class="sourceCode ruby"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Factory file.</span></span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="dt">FctoryBot</span><span class="at">.define</span> <span class="cf">do</span></span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>    factory <span class="wa">:movie</span> <span class="cf">do</span></span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>        title <span class="vs">&#39;A Fake Title&#39;</span></span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a>        rating <span class="vs">&#39;PG&#39;</span></span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a>        release_date <span class="kw">{</span> <span class="dv">2</span><span class="at">.years.ago</span> <span class="kw">}</span></span>
+<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a>    <span class="cf">end</span></span>
+<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a><span class="cf">end</span></span></code></pre></div>
+<div class="sourceCode" id="cb4"><pre class="sourceCode ruby"><code class="sourceCode ruby"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Test file.</span></span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>it <span class="vs">&#39;should include rating and year&#39;</span> <span class="cf">do</span></span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Can also use create to save it to db.</span></span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a>    movie <span class="kw">=</span> <span class="dt">FactoryBot</span><span class="at">.build</span>(<span class="wa">:movie</span>, <span class="wa">:title</span> <span class="kw">=&gt;</span> <span class="vs">&#39;Milk&#39;</span>)</span>
+<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a>    <span class="co"># etc...</span></span>
+<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a><span class="cf">end</span></span></code></pre></div>
+<h3 id="factories-with-associations">Factories with Associations</h3>
+<div class="sourceCode" id="cb5"><pre class="sourceCode ruby"><code class="sourceCode ruby"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Factory file.</span></span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a><span class="dt">FactoryBot</span><span class="at">.define</span> <span class="cf">do</span></span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>    factory <span class="wa">:moviegoer</span> <span class="cf">do</span></span>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a>        sequence(<span class="wa">:email</span>) <span class="kw">{</span> <span class="kw">|</span>n<span class="kw">|</span> <span class="st">&quot;user</span><span class="sc">#{</span>n<span class="sc">}</span><span class="st">@fakemail.com&quot;</span> <span class="kw">}</span></span>
+<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a>        name <span class="kw">{</span> <span class="dt">Faker</span><span class="kw">::</span><span class="dt">Name</span><span class="at">.name</span> <span class="kw">}</span></span>
+<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a>    <span class="cf">end</span></span>
+<span id="cb5-7"><a href="#cb5-7" aria-hidden="true" tabindex="-1"></a>    factory <span class="wa">:review</span> <span class="cf">do</span></span>
+<span id="cb5-8"><a href="#cb5-8" aria-hidden="true" tabindex="-1"></a>        potatoes <span class="dv">3</span></span>
+<span id="cb5-9"><a href="#cb5-9" aria-hidden="true" tabindex="-1"></a>        description <span class="vs">&#39;it was okay&#39;</span></span>
+<span id="cb5-10"><a href="#cb5-10" aria-hidden="true" tabindex="-1"></a>        <span class="co"># Create an association on instantiation.</span></span>
+<span id="cb5-11"><a href="#cb5-11" aria-hidden="true" tabindex="-1"></a>        association <span class="wa">:moviegoer</span></span>
+<span id="cb5-12"><a href="#cb5-12" aria-hidden="true" tabindex="-1"></a>    <span class="cf">end</span></span>
+<span id="cb5-13"><a href="#cb5-13" aria-hidden="true" tabindex="-1"></a><span class="cf">end</span></span></code></pre></div>
+<div class="sourceCode" id="cb6"><pre class="sourceCode ruby"><code class="sourceCode ruby"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Test file.</span></span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>review <span class="kw">=</span> create(<span class="wa">:review</span>)</span>
+<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a>review <span class="kw">=</span> create(<span class="wa">:review</span>, <span class="wa">:movie</span> <span class="kw">=&gt;</span> create(<span class="wa">:movie</span>, <span class="wa">:rating</span> <span class="kw">=&gt;</span> <span class="ch">&#39;R&#39;</span>))</span></code></pre></div>
+<h2 id="stubbing-the-internet">Stubbing the Internet</h2>
+<ul>
+<li>Important for SOA</li>
+<li>Can stub at the level of the class</li>
+<li>Can stub at the level of http
+(<code>allow(Net::HTTP).to receive(:get).with(&#39;&lt;full URI&gt;&#39;.and_return(&lt;expected return&gt;)</code>)</li>
+<li>Can use <code>webmock</code> gem
+<ul>
+<li>Can also use <code>VCR</code> gem which will initially make the
+request then use that response as a stub value</li>
+</ul></li>
+<li>For unit testing, stub nearby
+<ul>
+<li>Maximum isolation</li>
+<li>Fast</li>
+</ul></li>
+<li>For integration testing, stub far away
+<ul>
+<li>Test as many interfaces as possible</li>
+<li>Use things like <code>webmock</code></li>
+<li>Run against sandbox / stage</li>
+</ul></li>
+</ul>
+<h2 id="amount-of-testing">Amount of Testing</h2>
+<ul>
+<li>120-150% of actual code</li>
+<li>Often much higher for production systems</li>
+<li>Coverage measurement</li>
+</ul>
+<h3 id="coverage">Coverage</h3>
+<ul>
+<li>Coverage types:
+<ul>
+<li>S0 ≔ call every method</li>
+<li>S1 ≔ call every method from every call site</li>
+<li>C0 ≔ every line touched</li>
+<li>C1 ≔ every branch in both directions</li>
+<li>C1+decision coverage ≔ every subexpression in conditional</li>
+<li>C2 ≔ every path (difficult and disagreement on how valuable)</li>
+</ul></li>
+<li>Use to identity untested or undertested parts of code</li>
+<li>Need both integration and unit</li>
+</ul>
+<h2 id="other-testing-terms">Other testing Terms</h2>
+<ul>
+<li>Mutation testing ≙ if introduce deliberate error in code, does some
+test break</li>
+<li>Fuzz testing ≙ throw random input at code
+<ul>
+<li>Find ~20% MS bugs, crash ~20% Unix utilities</li>
+<li>Tests the app the way it wasn’t meant to be used</li>
+</ul></li>
+<li>DU-coverage ≙ is every pair <define x use x> executed?
+<ul>
+<li>DU ≔ define and use</li>
+</ul></li>
+<li>Black-box vs white-box / glass-box ≙ does the test know about the
+implementation?
+<ul>
+<li>White box ≙ trying to trick it / testing edge cases</li>
+<li>Black box ≙ trying random values</li>
+</ul></li>
+</ul>
+<h2 id="tdd-summary">TDD Summary</h2>
+<ul>
+<li>Use red - green - refactor and always have working code</li>
+<li>Test one behavior at a time using seams</li>
+<li>Use it ‘placeholders’ or pending to node tests you know you’ll
+need</li>
+<li>Read and understand coverage reports</li>
+<li>‘Defense in depth’ ≙ do not rely too heavily on any one kind of
+test</li>
+</ul>
+</body>
+</html>
