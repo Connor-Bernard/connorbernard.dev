@@ -1,0 +1,12 @@
+[
+    {
+        "title": "Notes",
+        "body": "This is the web index of all of my notes for CS169A.",
+        "ref": "./notes"
+    },
+    {
+        "title": "Notes (PDF)",
+        "body": "This is the PDF index of all of my notes for CS169A.",
+        "ref": "./notes_pdf"
+    }
+]

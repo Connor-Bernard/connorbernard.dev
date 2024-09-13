@@ -1,0 +1,95 @@
+
+[
+    {
+        "title": "Lecture 1",
+        "tags": ["plan and document", "agile", "SaaS"]
+    },
+    {
+        "title": "Lecture 2",
+        "tags": ["language", "ruby"]
+    },
+    {
+        "title": "Lecture 3",
+        "tags": ["ruby"]
+    },
+    {
+        "title": "Lecture 4",
+        "tags": ["web", "http", "soa", "rest"]
+    },
+    {
+        "title": "Lecture 5",
+        "tags": ["erb", "sessions"]
+    },
+    {
+        "title": "Lecture 6",
+        "tags": ["mvc", "rails"]
+    },
+    {
+        "title": "Lecture 7",
+        "tags": ["mvc"]
+    },
+    {
+        "title": "Lecture 8",
+        "tags": ["rails", "active record"]
+    },
+    {
+        "title": "Lecture 9",
+        "tags": ["forms", "rails db", "debugging"]
+    },
+    {
+        "title": "Lecture 10",
+        "tags": ["rails", "validation", "filter", "sso"]
+    },
+    {
+        "title": "Lecture 11",
+        "tags": ["rails", "active record", "db"]
+    },
+    {
+        "title": "Lecture 13",
+        "tags": ["rails a11y", "ajax"]
+    },
+    {
+        "title": "Lecture 14",
+        "tags": ["bdd", "agile", "cucumber", "capybara"]
+    },
+    {
+        "title": "Lecture 15",
+        "tags": ["agile", "cucumber", "capybara"]
+    },
+    {
+        "title": "Lecture 16",
+        "tags": ["testing", "doubles"]
+    },
+    {
+        "title": "Lecture 17",
+        "tags": ["mocks", "factories", "coverage", "testing"]
+    },
+    {
+        "title": "Lecture 18",
+        "tags": ["agile", "scrum", "prs"]
+    },
+    {
+        "title": "Lecture 19",
+        "tags": ["prs", "ticketing", "design patterns"]
+    },
+    {
+        "title": "Lecture 20",
+        "tags": ["solid", "design patterns"]
+    },
+    {
+        "title": "Lecture 22",
+        "tags": ["paas", "metrics", "cicd"]
+    },
+    {
+        "title": "Lecture 23",
+        "tags": ["ffs", "monitoring", "caching"]
+    },
+    {
+        "title": "Lecture 24",
+        "tags": ["security", "legacy code"]
+    },
+    {
+        "title": "Lecture 25",
+        "tags": ["automated testing", "metrics", "p&d"]
+    }
+]

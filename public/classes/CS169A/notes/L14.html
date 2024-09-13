@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang xml:lang>
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>L14</title>
+  <style>
+html {
+color: #1a1a1a;
+background-color: #fdfdfd;
+}
+body {
+margin: 0 auto;
+max-width: 36em;
+padding-left: 50px;
+padding-right: 50px;
+padding-top: 50px;
+padding-bottom: 50px;
+hyphens: auto;
+overflow-wrap: break-word;
+text-rendering: optimizeLegibility;
+font-kerning: normal;
+}
+@media (max-width: 600px) {
+body {
+font-size: 0.9em;
+padding: 12px;
+}
+h1 {
+font-size: 1.8em;
+}
+}
+@media print {
+html {
+background-color: white;
+}
+body {
+background-color: transparent;
+color: black;
+font-size: 12pt;
+}
+p, h2, h3 {
+orphans: 3;
+widows: 3;
+}
+h2, h3, h4 {
+page-break-after: avoid;
+}
+}
+p {
+margin: 1em 0;
+}
+a {
+color: #1a1a1a;
+}
+a:visited {
+color: #1a1a1a;
+}
+img {
+max-width: 100%;
+}
+svg {
+height: auto;
+max-width: 100%;
+}
+h1, h2, h3, h4, h5, h6 {
+margin-top: 1.4em;
+}
+h5, h6 {
+font-size: 1em;
+font-style: italic;
+}
+h6 {
+font-weight: normal;
+}
+ol, ul {
+padding-left: 1.7em;
+margin-top: 1em;
+}
+li > ol, li > ul {
+margin-top: 0;
+}
+blockquote {
+margin: 1em 0 1em 1.7em;
+padding-left: 1em;
+border-left: 2px solid #e6e6e6;
+color: #606060;
+}
+code {
+font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+font-size: 85%;
+margin: 0;
+hyphens: manual;
+}
+pre {
+margin: 1em 0;
+overflow: auto;
+}
+pre code {
+padding: 0;
+overflow: visible;
+overflow-wrap: normal;
+}
+.sourceCode {
+background-color: transparent;
+overflow: visible;
+}
+hr {
+background-color: #1a1a1a;
+border: none;
+height: 1px;
+margin: 1em 0;
+}
+table {
+margin: 1em 0;
+border-collapse: collapse;
+width: 100%;
+overflow-x: auto;
+display: block;
+font-variant-numeric: lining-nums tabular-nums;
+}
+table caption {
+margin-bottom: 0.75em;
+}
+tbody {
+margin-top: 0.5em;
+border-top: 1px solid #1a1a1a;
+border-bottom: 1px solid #1a1a1a;
+}
+th {
+border-top: 1px solid #1a1a1a;
+padding: 0.25em 0.5em 0.25em 0.5em;
+}
+td {
+padding: 0.125em 0.5em 0.25em 0.5em;
+}
+header {
+margin-bottom: 4em;
+text-align: center;
+}
+#TOC li {
+list-style: none;
+}
+#TOC ul {
+padding-left: 1.3em;
+}
+#TOC > ul {
+padding-left: 0;
+}
+#TOC a:not(:hover) {
+text-decoration: none;
+}
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+
+ul.task-list[class]{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+font-size: inherit;
+width: 0.8em;
+margin: 0 0.8em 0.2em -1.6em;
+vertical-align: middle;
+}
+
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+{ counter-reset: source-line 0; }
+pre.numberSource code > span
+{ position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+{ content: counter(source-line);
+position: relative; left: -1em; text-align: right; vertical-align: baseline;
+border: none; display: inline-block;
+-webkit-touch-callout: none; -webkit-user-select: none;
+-khtml-user-select: none; -moz-user-select: none;
+-ms-user-select: none; user-select: none;
+padding: 0 4px; width: 4em;
+color: #aaaaaa;
+}
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa; padding-left: 4px; }
+div.sourceCode
+{ }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } 
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } 
+code span.at { color: #7d9029; } 
+code span.bn { color: #40a070; } 
+code span.bu { color: #008000; } 
+code span.cf { color: #007020; font-weight: bold; } 
+code span.ch { color: #4070a0; } 
+code span.cn { color: #880000; } 
+code span.co { color: #60a0b0; font-style: italic; } 
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } 
+code span.do { color: #ba2121; font-style: italic; } 
+code span.dt { color: #902000; } 
+code span.dv { color: #40a070; } 
+code span.er { color: #ff0000; font-weight: bold; } 
+code span.ex { } 
+code span.fl { color: #40a070; } 
+code span.fu { color: #06287e; } 
+code span.im { color: #008000; font-weight: bold; } 
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } 
+code span.kw { color: #007020; font-weight: bold; } 
+code span.op { color: #666666; } 
+code span.ot { color: #007020; } 
+code span.pp { color: #bc7a00; } 
+code span.sc { color: #4070a0; } 
+code span.ss { color: #bb6688; } 
+code span.st { color: #4070a0; } 
+code span.va { color: #19177c; } 
+code span.vs { color: #4070a0; } 
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } 
+</style>
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">L14</h1>
+</header>
+<h1 id="behavior-driven-design-and-user-stories">Behavior-Driven Design
+and User Stories</h1>
+<h2 id="agile">Agile</h2>
+<ul>
+<li>Good because ensures stakeholders are getting what they want because
+of constant feedback (validation vs verification)
+<ul>
+<li>Avoid miscommunication</li>
+</ul></li>
+<li>Maintain working prototype while deploying new features every
+iteration</li>
+<li>Uses BDD</li>
+</ul>
+<h2 id="behavior-driven-design-bdd">Behavior-Driven Design (BDD)</h2>
+<ul>
+<li>Asks questions about desired behavior of app before and during
+development to reduce miscommunication</li>
+<li>Captures answers as user stories</li>
+<li>Concentrates on behavior of app vs implementation of app
+<ul>
+<li>TDD tests implementation</li>
+</ul></li>
+</ul>
+<h3 id="user-stories">User Stories</h3>
+<ul>
+<li>1–3 sentences in everyday language</li>
+<li>Fits on an index card</li>
+<li>written by/with customer</li>
+<li>‘Connextra format’:
+<ul>
+<li>Feature name</li>
+<li>As a {kind of stakeholder}, so that I can {goal}, I want to
+{task}</li>
+<li>Captures the ‘business value’ of a feature</li>
+</ul></li>
+<li>Plain language, so it is nonthreatening to nontechnical customers
+<ul>
+<li>All stakeholders help brainstorms</li>
+</ul></li>
+<li>Easy to re-arrange / prioritize</li>
+<li>Short and specific to one behavior so easier to change during
+development</li>
+</ul>
+<h4 id="smart-user-stories">SMART User Stories</h4>
+<ul>
+<li>Specific and Measurable
+<ul>
+<li>Can write down a step-by-step procedure that someone with no
+knowledge of the app could do to verify the specific behavior</li>
+<li>Anti-example: ‘UI should be more user-friendly’</li>
+<li>Example: Given/When/Then: Given {precondition} when {action} then
+{result}</li>
+<li>Good for writing automated tests</li>
+</ul></li>
+<li>Achievable (ideally, implementation in 1 iteration)
+<ul>
+<li>Divide into multiple stories that form an <em>epic</em> if cannot be
+completed in 1 iteration</li>
+<li>Goal: always have working code at end of iteration</li>
+<li>&lt;1 story per iteration ⟹ need to improve point estimation</li>
+</ul></li>
+<li>Relevant (’the 5 why’s)
+<ul>
+<li>Ask why 5 times as follow-up questions and if you can get to 5, it
+is probably good</li>
+</ul></li>
+<li>Timeboxed (knowing when to give up)</li>
+</ul>
+<h4 id="class-responsibility-collaborator-crc-cards">Class-Responsibility-Collaborator
+(CRC) Cards</h4>
+<ul>
+<li>Goal: Make design concrete:</li>
+<li>Answers:
+<ul>
+<li>What does this class know?</li>
+<li>What does it do?</li>
+<li>What other classes does it collaborate with and how?</li>
+</ul></li>
+</ul>
+<h2 id="lo-fi-ui-sketches-and-storyboards">Lo-Fi UI Sketches and
+Storyboards</h2>
+<ul>
+<li>Avoids WISBNWIW (what I said but not what I wanted)</li>
+<li>Just a basic sketch</li>
+<li>Storyboards animate the prototype manually
+<ul>
+<li>Have sketches for each view and link buttons on each sketch to the
+next view</li>
+</ul></li>
+<li>Less intimidating to nontechnical stakeholders</li>
+<li>More likely to suggest changes to UI if no code behind it</li>
+<li>More likely to focus on interaction (behavior) rather than colors,
+fonts, …
+<ul>
+<li>CSS can be set up later to change the exact look</li>
+</ul></li>
+</ul>
+<h2 id="stories-to-acceptance-tests">Stories to Acceptance Tests</h2>
+<ul>
+<li>Acceptance: ensure satisfied customer</li>
+<li>Integration: test full-stack functionality</li>
+<li>Cucumber connects ‘almost plain language’ test description to code
+<ul>
+<li>Can discuss with customer</li>
+<li>You define your own ‘vocabulary’ (a domain language) and terms that
+make sense for your app</li>
+</ul></li>
+</ul>
+<h3 id="cucumber">Cucumber</h3>
+<ul>
+<li><code>Given</code> ≙ state of world before event: set up
+preconditions</li>
+<li><code>When</code> ≙ user does something
+<ul>
+<li>eg: simulate user pushing a button</li>
+</ul></li>
+<li><code>Then</code> ≙ check expected postconditions
+<ul>
+<li><code>And</code> and <code>But</code> can be used as extension</li>
+</ul></li>
+<li>Feature is the name of the story</li>
+<li>The scenario is ≥ 1 happy / sad paths</li>
+<li>3–8 steps per scenario
+<ul>
+<li>Begin with keyword</li>
+</ul></li>
+<li>Have to use explicit examples; cannot be ambiguous</li>
+<li>Regex used to match scenarios to step definitions
+<ul>
+<li>eg: <code>When /I follow &quot;(.*)&quot;/ do |match| {...}</code></li>
+<li>Many defined in <code>cucumbet-rails-training-wheels</code></li>
+</ul></li>
+<li>Generally relies on Capybara</li>
+</ul>
+<div class="sourceCode" id="cb1"><pre class="sourceCode yaml"><code class="sourceCode yaml"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">Feature</span><span class="kw">:</span><span class="at"> display studenst in alpha order</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="at">    As an instructor</span></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="at">    So that I can quickly find a student in the list</span></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="at">    I want the students to be in alphabetical order by last name</span></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="fu">Scenario</span><span class="kw">:</span><span class="at"> list students in alpha order</span></span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a><span class="at">    Given student &#39;John Anderson&#39; exists</span></span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a><span class="at">    And student &#39;Jane Bennett&#39; exists</span></span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a><span class="at">    When I visit the list of all students</span></span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a><span class="at">    Then &#39;Jane Bennett&#39; should appear before &#39;Jon Anderson&#39;</span></span></code></pre></div>
+<ul>
+<li>Usually stored in <code>features</code> at the root; specs end in
+<code>.feature</code></li>
+<li>Step definitions stored in <code>features/step_definitions</code>
+where you can have as many <code>.rb</code> files with step defs</li>
+<li>Common to randomize values when necessary</li>
+<li>Every scenario is stateless</li>
+<li>Basically always use regex</li>
+</ul>
+<h3 id="capybara">Capybara</h3>
+<ul>
+<li>Library that simulates user by automating browser</li>
+<li>HTTP request to any route in app</li>
+<li>Submit forms, interact with UI elements</li>
+<li>Interact with app, receive pages</li>
+<li>Execute JavaScript</li>
+<li>Parse HTML, allow programmatic inspection</li>
+<li>Some methods:
+<ul>
+<li><code>visit</code> goes to url</li>
+<li><code>click_link</code></li>
+<li><code>fill_in</code> fills in a field in a form (can either use
+label or css selector)
+<ul>
+<li>eg:
+<code>fill_in &#39;form#form1 nameField&#39;, :with =&gt; &#39;{value}&#39;</code></li>
+</ul></li>
+<li><code>save_page</code> will save a page to
+<code>tmp/capybara/</code></li>
+</ul></li>
+<li>Makes requests through <code>rack-test</code> or
+<code>capybara-webkit</code> for JS support</li>
+<li>Can also run on <code>webdriver</code> which opens a browser and
+actually simulates it all
+<ul>
+<li>Limits Capybara to the UI</li>
+</ul></li>
+</ul>
+</body>
+</html>
