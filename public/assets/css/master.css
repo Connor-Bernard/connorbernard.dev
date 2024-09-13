@@ -17,6 +17,7 @@ html{
 html, body{
     margin:0;
     padding:0;
+    min-height: 100vh;
     overflow-x:hidden;
     -ms-overflow-style:none;
     scrollbar-width:none;
@@ -55,9 +56,6 @@ p{
 
 section:not(:first-of-type){
     margin:100px 0 100px;
-}
-section:first-child{
-    background-color:red;
 }
 
 button{
@@ -100,50 +98,22 @@ button{
 }
 
 @keyframes loader {
-  0% {
-    transform: rotate(0deg);
-  }
-  100% {
-    transform: rotate(360deg);
-  }
-} 
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
 
 body{
+    position: relative;
     background-color: black;
 }
 
-/* .blur{
-    position:absolute;
-    z-index: -1;
-}
-.blur > img{
-    width:100%;
-}
-
-#blur1{
-    width: 60vw;
-    top:50%;
-    left:5%;
-    opacity:60%;
-}
-#blur2{
-    top:4;
-    width: 60vw;
-    opacity:40%;
-    right:0vw;
-}
-#blur3{
-    top:400%;
-    width: 100vw;
-    left:-20vw;
-}
-#blur4{
-    top:700%;
-} */
-
 header{
     background-color:black;
-    width:100%;
+    width:100vw;
     height:90px;
     position:fixed;
     top:0;
@@ -169,11 +139,12 @@ header{
     margin-top:10px;
 }
 
-.rainbowHover{
+/* This is enabled only for webkit, so disabling it until fully featured.*/
+/* .rainbowHover{
     background:var(--gradient-3);
     background-clip:text;
     -webkit-background-clip:text;
-}
+} */
 .navItem > a{
     color:white;
     font-family: var(--copy-font);
@@ -181,7 +152,7 @@ header{
     font-size:20px;
 }
 .navItem a:hover{
-    color:transparent;
+    color:var(--accent);
 }
 .hamburger{
     display:none; 
@@ -226,7 +197,9 @@ footer{
     position:absolute;
     bottom:0;
     z-index:1;
+    background-color: black;
 }
+
 .socialIcons{
     display:flex;
     flex-direction:row;
@@ -299,5 +272,16 @@ footer{
     }
     .socialIcons{
         width:auto;
+    }
+}
+
+@media screen and (max-width:700px){
+    .rainbowBorder{
+        width:100%;
+        margin:0;
+    }
+    .portfolioItem{
+        padding:20px;
+        height: fit-content !important;
     }
 }

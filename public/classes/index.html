@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta name="description" content="Personal website for Connor Bernard, Software Developer.  Check out his portfolio here!" />
+        <meta name="keywords" , content="Connor Bernard, Connor, Bernard, Software Developer, Software Engineer" />
+        <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+        <link rel="manifest" href="/manifest.json" />
+        <link rel="stylesheet" href="/assets/css/master.css" />
+        <link rel="stylesheet" href="/assets/css/itemList.css" />
+        <title>Connor Bernard</title>
+    </head>
+    <body>
+        <div id="loaderPage"><span id="loader" /></div>
+        <header>
+            <div class="hfContent">
+                <div class="logo">
+                    <a href="/#top"><img src="/assets/img/logo.svg" alt="Connor Bernard Signature Logo" height=65px /></a>
+                </div>
+                <div class="hamburger">
+                    <span class="bar" />
+                    <span class="bar" />
+                    <span class="bar" />
+                </div>
+                <nav class="headerNav">
+                    <div class="rainbowHover">
+                        <div class="navItem">
+                            <a href="/classes">Classes</a>
+                        </div>
+                    </div>
+                    <div class="rainbowHover">
+                        <div class="navItem">
+                            <a href="/#AboutMe">About Me</a>
+                        </div>
+                    </div>
+                    <div class="rainbowHover">
+                        <div class="navItem">
+                            <a href="/#Experience">Experience</a>
+                        </div>
+                    </div>
+                    <div class="rainbowHover">
+                        <div class="navItem">
+                            <a href="/#Portfolio">Portfolio</a>
+                        </div>
+                    </div>
+                    <div class="rainbowHover">
+                        <div class="navItem">
+                            <a href="/#Contact">Contact</a>
+                        </div>
+                    </div>
+                </nav>
+            </div>
+        </header>
+        <div style="height:90px;"></div>
+
+        <div class="sectionTitle">
+            <h2>Class List</h2>
+            <img src="/assets/img/sectionDividerLine.svg" alt="Section divider" />
+        </div>
+        <div id="classList" class="itemListContainer">
+            <template ListItemTemplate class="classes">
+                <div class="listItem rainbowBorder clickable">
+                    <div class="listItemContents">
+                            <h3 class="itemTitle">Note Item Title</h3>
+                            <p class="itemBody">Lorem ipsum dolor sit amet consectetur. Et phasellus in semper enim cursus eu. Sed amet ac netus aliquet. Felis dui ac
+                            id mollis neque leo donec eleifend donec. Accumsan leo pellentesque tellus diam etiam arcu eget tempor. Vitae et tellus
+                            maecenas donec blandit tortor ligula quis integer.</p>
+                        <div class="pillBox">
+                            <template PillTemplate>
+                                <div class="pill">tag</div>
+                            </template>
+                        </div>
+                    </div>
+                </div>
+            </template>
+        </div>
+
+        <div style="position: relative; height: 190px;"></div>
+        <footer>
+            <div class="hfContent">
+                <div class="socialIcons">
+                    <a href="https://github.com/Connor-Bernard">
+                        <img src="/assets/img/socialIcons/Github Logo.webp" alt="GitHub access link" loading="lazy" />
+                    </a>
+                    <a href="https://www.linkedin.com/in/connorbernard/">
+                        <img src="/assets/img/socialIcons/Linkedin Logo.webp" alt="LinkedIn access link" loading="lazy" />
+                    </a>
+                    <a href="https://bitbucket.org/connor-bernard/">
+                        <img src="/assets/img/socialIcons/Bitbucket Logo.webp" alt="BitBucket access link" loading="lazy" />
+                    </a>
+                    <a href="mailto:connor@connorbernard.dev">
+                        <img src="/assets/img/socialIcons/Mail Symbol.webp" alt="Email access link" loading="lazy" />
+                    </a>
+                </div>
+                <nav class="footerNav">
+                    <div class="rainbowHover">
+                        <div class="navItem">
+                            <a href="/#top">Home</a>
+                        </div>
+                    </div>
+                    <div class="rainbowHover">
+                        <div class="navItem">
+                            <a href="/#AboutMe">About Me</a>
+                        </div>
+                    </div>
+                    <div class="rainbowHover">
+                        <div class="navItem">
+                            <a href="/#Experience">Experience</a>
+                        </div>
+                    </div>
+                    <div class="rainbowHover">
+                        <div class="navItem">
+                            <a href="/#Portfolio">Portfolio</a>
+                        </div>
+                    </div>
+                    <div class="rainbowHover">
+                        <div class="navItem">
+                            <a href="/#Contact">Contact</a>
+                        </div>
+                    </div>
+                </nav>
+            </div>
+        </footer>
+        <script src="./assets/js/classListPopulator.js"></script>
+        <script src="/assets/js/index.js" defer></script>
+    </body>
+</html>

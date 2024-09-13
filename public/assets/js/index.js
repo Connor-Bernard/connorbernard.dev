@@ -59,6 +59,7 @@ function __initHamburger__(){
 // });
 __initHamburger__();
 
+
 addEventListener("load", () => {
     document.querySelector("#loaderPage").style.display = "none";
     document.querySelector("header").style.position = "fixed";

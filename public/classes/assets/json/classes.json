@@ -1,0 +1,8 @@
+[
+    {
+        "class": "Introduction to Software Engineering",
+        "name": "cs169a",
+        "description": "Ideas and techniques for designing, developing, and modifying large software systems.",
+        "tags": ["ruby", "agile", "saas"]
+    }
+]
