@@ -70,12 +70,13 @@ Promise.all([
     fetch("./assets/json/lectures.json").then(res => res.json()),
     fetch("../assets/json/lectureTags.json").then(res => res.json()),
 ]).then(([lectureData, lectureTagData]) => {
+    console.debug({ lectureData, lectureTagData });
     if (lectureData.length === lectureTagData.length) {
         lectureData.forEach((el, i) => (el.tags = lectureTagData[i].tags));
     }
-    populateList('classOptions', lectureData, (instance) => {
-        instance.querySelector('.itemBody').innerHTML = `
-            <a href='${lectureData.file}' download='true'>Download here</a>
+    populateList('classOptions', lectureData, (item, itemData) => {
+        item.querySelector('.itemBody').innerHTML = `
+            <a href='${itemData.file}' download='true'>Download here</a>
         `;
     });
     updateListItemWidths();
