@@ -28,7 +28,7 @@
 .pill{
     padding:5px 8px;
     color:var(--tertiary-pink);
-    background-color: rgba(211, 112, 219, 0.15);
+    background-color: rgba(211, 112, 219, 0.3);
     border-radius:10px;
 }
 
