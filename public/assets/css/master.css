@@ -217,7 +217,9 @@ footer{
     background:var(--gradient-3);
     border-radius:15px;
     margin:0 20px;
+    padding: 4px;
 }
+
 
 @media screen and (max-width:1024px){
     .hfContent > .headerNav{

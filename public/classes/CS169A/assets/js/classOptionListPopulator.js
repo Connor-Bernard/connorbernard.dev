@@ -55,8 +55,27 @@ function getPill(parent, pillValue) {
     return pill;
 }
 
+/**
+ * Updates the size of all list items on the page to maximum size
+ * of all list items on the page.
+ */
+function makeListItemsUniform() {
+    const listItems = document.querySelectorAll('.listItemContents');
+    let maxItemHeight = 0;
+    let maxItemWidth = 0;
+    Array.from(listItems).forEach(e => {
+        maxItemHeight = Math.max(maxItemHeight, e.offsetHeight);
+        maxItemWidth = Math.max(maxItemWidth, e.offsetWidth);
+    });
+    listItems.forEach(e => {
+        e.style.minHeight = `${maxItemHeight}px`;
+        e.style.minWidth = `${maxItemWidth}px`;
+    });
+}
+
 fetch("./assets/json/options.json").then(res => {
     res.json().then(listData => {
         populateList('classOptions', listData);
+        makeListItemsUniform();
     });
 });

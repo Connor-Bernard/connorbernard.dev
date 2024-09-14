@@ -2,7 +2,8 @@
     display:flex;
     gap:40px;
     flex-wrap:wrap;
-    justify-content:center;
+    justify-content: center;
+    place-items: center;
 }
 .listItemContents{
     position:relative;
@@ -14,7 +15,7 @@
     background:black;
     border-radius:15px;
     max-width:700px;
-    margin:3px;
+    height: 100%;
 }
 .clickable{
     cursor: pointer;
@@ -34,7 +35,6 @@
 
 @media screen and (max-width:700px){
     .listItem{
-        padding:20px;
         height: fit-content !important;
     }
 }

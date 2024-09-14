@@ -56,13 +56,21 @@ function getPill(parent, pillValue) {
 }
 
 /**
- * Updates the width of all list items on the page to the maximum width
+ * Updates the size of all list items on the page to maximum size
  * of all list items on the page.
  */
-function updateListItemWidths() {
-    const listItems = document.querySelectorAll('.listItem');
-    const maxItemWidth = Math.max(...Array.from(listItems).map(e => e.offsetWidth));
-    listItems.forEach(e => e.style.minWidth = `${maxItemWidth}px`);
+function makeListItemsUniform() {
+    const listItems = document.querySelectorAll('.listItemContents');
+    let maxItemHeight = 0;
+    let maxItemWidth = 0;
+    Array.from(listItems).forEach(e => {
+        maxItemHeight = Math.max(maxItemHeight, e.offsetHeight);
+        maxItemWidth = Math.max(maxItemWidth, e.offsetWidth);
+    });
+    listItems.forEach(e => {
+        e.style.minHeight = `${maxItemHeight}px`;
+        e.style.minWidth = `${maxItemWidth}px`;
+    });
 }
 
 // If you didn't already have an aneurism looking at my code, here goes nothing.
@@ -79,5 +87,5 @@ Promise.all([
             <a href='${itemData.file}' download='true'>Download here</a>
         `;
     });
-    updateListItemWidths();
+    makeListItemsUniform();
 });
